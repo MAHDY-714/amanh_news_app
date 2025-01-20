@@ -1,4 +1,9 @@
+import 'package:amanh_news_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+
+void main() {
+  runApp(AMANHNews());
+}
 
 class AMANHNews extends StatelessWidget {
   const AMANHNews({super.key});
@@ -6,7 +11,8 @@ class AMANHNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      // routerConfig: ,
+      debugShowCheckedModeBanner: false,
+      routerConfig: AppRouter.routers,
     );
   }
 }
