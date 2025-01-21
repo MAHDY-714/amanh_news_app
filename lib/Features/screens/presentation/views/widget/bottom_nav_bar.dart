@@ -1,7 +1,9 @@
 import 'package:amanh_news_app/Features/screens/presentation/views/widget/icon_in_nav_bar.dart';
+import 'package:amanh_news_app/core/utils/app_router.dart';
 import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
+import 'package:go_router/go_router.dart';
 import 'package:icon_broken/icon_broken.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -25,17 +27,15 @@ class BottomNavBar extends StatelessWidget {
         children: [
           IconInNavBar(
             icon: TablerIcons.world_search,
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.kSearchView);
+            },
           ),
-
-          // IconInNavBar(
-          //   icon: Icons.home,
-          //   onPressed: () {},
-          // ),
-
           IconInNavBar(
             icon: IconBroken.Setting,
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.kSettingsView);
+            },
           ),
         ],
       ),
