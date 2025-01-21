@@ -1,4 +1,4 @@
-import 'package:amanh_news_app/core/utils/constance.dart';
+import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:flutter/material.dart';
 
 class IconInNavBar extends StatelessWidget {

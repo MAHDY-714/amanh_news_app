@@ -1,7 +1,8 @@
-import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/cayegory_active.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/category_active.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
+import 'package:amanh_news_app/core/styles/assets/assets_font_family.dart';
 import 'package:amanh_news_app/core/styles/box_decorations.dart';
-import 'package:amanh_news_app/core/utils/constance.dart';
+import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:flutter/material.dart';
 
 class NewsCategoriesItemView extends StatelessWidget {
@@ -21,11 +22,10 @@ class NewsCategoriesItemView extends StatelessWidget {
       padding:
           const EdgeInsetsDirectional.symmetric(horizontal: 4.0, vertical: 8.0),
       child: Container(
-        height: 140,
         width: kWidthConditions(
           context,
           valueIsTrue: kWidth(context) * .35,
-          valueIsFalse: kWidth(context) * .35,
+          valueIsFalse: kWidth(context) * .36,
         ),
         decoration: BoxDecoration(
           color: Colors.transparent,
@@ -35,10 +35,10 @@ class NewsCategoriesItemView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              height: 80,
+              height: 95,
               width: kWidthConditions(
                 context,
-                valueIsTrue: kWidth(context) * .35,
+                valueIsTrue: kWidth(context) * .4,
                 valueIsFalse: kWidth(context) * .35,
               ),
               decoration:
@@ -60,8 +60,18 @@ class NewsCategoriesItemView extends StatelessWidget {
                   nameCategory,
                   style: TextStyle(
                     color: AppColor.red,
-                    fontWeight: FontWeight.w900,
-                    fontSize: isActive ? 13 : 10,
+                    fontFamily: isActive
+                        ? AssetsFontFamily.bitter400
+                        : AssetsFontFamily.bitter300,
+                    fontSize: kWidthConditionsFonts(
+                      context,
+                      isConditions: isActive,
+                      fontSizeLargeTrue: 13.0,
+                      fontSizeLargeFalse: 16.0,
+                      fontSizeSmallTrue: 10.0,
+                      fontSizeSmallFalse: 12.0,
+                    ),
+                    // isActive ? 13 : 10,
                   ),
                 ),
               ),

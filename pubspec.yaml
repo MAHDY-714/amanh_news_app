@@ -93,6 +93,92 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+
+    # Jersey
+    - family: Jersey400
+      fonts:
+        - asset: assets/fonts/Jersey25-Regular.ttf
+
+    # orbitron
+    - family: orbitron900
+      fonts:
+        - asset: assets/fonts/Orbitron-Black.ttf
+
+    # inter
+    - family: inter900
+      fonts:
+        - asset: assets/fonts/inter/Inter-Black.ttf
+
+    - family: inter800
+      fonts:
+        - asset: assets/fonts/inter/Inter-ExtraBold.ttf
+
+    - family: inter700
+      fonts:
+        - asset: assets/fonts/inter/Inter-Bold.ttf
+
+    #platypi
+    - family: platypi900
+      fonts:
+        - asset: assets/fonts/platypi/Platypi-ExtraBold.ttf
+
+    - family: platypi700
+      fonts:
+        - asset: assets/fonts/platypi/Platypi-Bold.ttf
+
+    - family: platypi600
+      fonts:
+        - asset: assets/fonts/platypi/Platypi-Medium.ttf
+
+    - family: platypi500
+      fonts:
+        - asset: assets/fonts/platypi/Platypi-SemiBold.ttf
+
+    - family: platypi400
+      fonts:
+        - asset: assets/fonts/platypi/Platypi-Regular.ttf
+
+    - family: platypi300
+      fonts:
+        - asset: assets/fonts/platypi/Platypi-Light.ttf
+
+    #Bitter Fonts
+    - family: bitter900
+      fonts:
+        - asset: assets/fonts/bitter/Bitter-Black.ttf
+
+    - family: bitter800
+      fonts:
+        - asset: assets/fonts/bitter/Bitter-ExtraBold.ttf
+
+    - family: bitter700
+      fonts:
+        - asset: assets/fonts/bitter/Bitter-Bold.ttf
+
+    - family: bitter600
+      fonts:
+        - asset: assets/fonts/bitter/Bitter-SemiBold.ttf
+
+    - family: bitter500
+      fonts:
+        - asset: assets/fonts/bitter/Bitter-Medium.ttf
+
+    - family: bitter400
+      fonts:
+        - asset: assets/fonts/bitter/Bitter-Regular.ttf
+
+    - family: bitter300
+      fonts:
+        - asset: assets/fonts/bitter/Bitter-Light.ttf
+
+    - family: bitter200
+      fonts:
+        - asset: assets/fonts/bitter/Bitter-ExtraLight.ttf
+
+    - family: bitter100
+      fonts:
+        - asset: assets/fonts/bitter/Bitter-Thin.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

@@ -1,6 +1,6 @@
 import 'package:amanh_news_app/Features/screens/presentation/views/widget/icon_in_nav_bar.dart';
+import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/utils/app_router.dart';
-import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:go_router/go_router.dart';
@@ -14,7 +14,7 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: kHeightConditions(context, valueIsTrue: 55.0, valueIsFalse: 60.0),
+      height: kHeightConditions(context, valueIsTrue: 55.0, valueIsFalse: 65.0),
       // alignment: AlignmentDirectional.center,
       padding: EdgeInsetsDirectional.symmetric(
           horizontal:
