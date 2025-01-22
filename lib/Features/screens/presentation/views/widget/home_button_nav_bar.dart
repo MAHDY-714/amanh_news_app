@@ -13,7 +13,7 @@ class HomeButtonInNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       backgroundColor: AppColor.redDeep,
-      radius: 30,
+      radius: kWidthConditions(context, valueIsTrue: 30.0, valueIsFalse: 35.0),
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -21,8 +21,8 @@ class HomeButtonInNavBar extends StatelessWidget {
             isActive: true,
             radius: kWidthConditions(
               context,
-              valueIsTrue: 13.5,
-              valueIsFalse: 16.0,
+              valueIsTrue: 15.0,
+              valueIsFalse: 17.5,
             ),
           ),
           FloatingActionButton.large(
@@ -41,7 +41,7 @@ class HomeButtonInNavBar extends StatelessWidget {
             backgroundColor: Colors.white,
             shape: CircleBorder(
               side: BorderSide(
-                color: AppColor.redDeep,
+                color: AppColor.redDeep2,
                 width: 2,
               ),
             ),

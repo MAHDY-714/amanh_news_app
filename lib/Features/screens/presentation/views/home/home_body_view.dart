@@ -1,6 +1,6 @@
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/news_categories_list_view.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/news/new_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeBodyView extends StatelessWidget {
   const HomeBodyView({super.key});
@@ -12,6 +12,7 @@ class HomeBodyView extends StatelessWidget {
       child: Column(
         children: [
           NewsCategoriesListView(),
+          NewsListView(),
         ],
       ),
     );

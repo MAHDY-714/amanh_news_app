@@ -5,8 +5,8 @@ import 'package:amanh_news_app/core/styles/box_decorations.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:flutter/material.dart';
 
-class NewsCategoriesItemView extends StatelessWidget {
-  const NewsCategoriesItemView({
+class NewsCategoriesItemBuilder extends StatelessWidget {
+  const NewsCategoriesItemBuilder({
     super.key,
     this.isActive = false,
     required this.imageCategory,
@@ -35,7 +35,11 @@ class NewsCategoriesItemView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              height: 95,
+              height: kHeightConditions(
+                context,
+                valueIsTrue: 85.0,
+                valueIsFalse: 95.0,
+              ),
               width: kWidthConditions(
                 context,
                 valueIsTrue: kWidth(context) * .4,

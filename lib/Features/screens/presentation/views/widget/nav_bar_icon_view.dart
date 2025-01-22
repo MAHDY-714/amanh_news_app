@@ -1,8 +1,8 @@
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:flutter/material.dart';
 
-class IconInNavBar extends StatelessWidget {
-  const IconInNavBar({
+class NavBarIconBuilder extends StatelessWidget {
+  const NavBarIconBuilder({
     super.key,
     required this.icon,
     this.color,

@@ -16,7 +16,7 @@ class NewsCategoriesListView extends StatelessWidget {
           kHeightConditions(context, valueIsTrue: 165.0, valueIsFalse: 175.0),
       width: kWidth(context),
       child: ListView.builder(
-        itemBuilder: ((context, index) => NewsCategoriesItemView(
+        itemBuilder: ((context, index) => NewsCategoriesItemBuilder(
               imageCategory: AssetsImages.newsCategoriesImages[index],
               nameCategory: kNewsCategoriesName[index],
               isActive: index == 0 ? true : false,

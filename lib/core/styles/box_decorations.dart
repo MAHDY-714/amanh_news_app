@@ -13,4 +13,20 @@ abstract class BoxDecorations {
       ),
     );
   }
+
+  static BoxDecoration imageInNewsItemBuilderBoxDecoration(
+      {required String image}) {
+    return BoxDecoration(
+      color: Color(0xFF420504),
+      border: Border.all(
+        color: Colors.grey,
+        width: 1.0,
+      ),
+      borderRadius: BorderRadius.circular(14.0),
+      image: DecorationImage(
+        fit: BoxFit.cover,
+        image: AssetImage(image),
+      ),
+    );
+  }
 }

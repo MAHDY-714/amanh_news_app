@@ -6,3 +6,4 @@ abstract class AppColor {
   static const redDeep = Color(0xFF590100);
   static const redDeep2 = Color(0xFF7C0200);
 }
+//*0xFF590100

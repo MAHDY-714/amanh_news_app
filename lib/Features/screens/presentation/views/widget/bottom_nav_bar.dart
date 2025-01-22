@@ -1,4 +1,5 @@
-import 'package:amanh_news_app/Features/screens/presentation/views/widget/icon_in_nav_bar.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/widget/nav_bar_icon_view.dart';
+import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
@@ -20,18 +21,24 @@ class BottomNavBar extends StatelessWidget {
           horizontal:
               kWidthConditions(context, valueIsTrue: 35.0, valueIsFalse: 45.0)),
       decoration: BoxDecoration(
-        color: const Color(0xFF590100),
+        border: BorderDirectional(
+          top: BorderSide(
+            color: AppColor.redDeep2,
+            width: 3.0,
+          ),
+        ),
+        color: AppColor.redDeep,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          IconInNavBar(
+          NavBarIconBuilder(
             icon: TablerIcons.world_search,
             onPressed: () {
               GoRouter.of(context).push(AppRouter.kSearchView);
             },
           ),
-          IconInNavBar(
+          NavBarIconBuilder(
             icon: IconBroken.Setting,
             onPressed: () {
               GoRouter.of(context).push(AppRouter.kSettingsView);
