@@ -13,7 +13,7 @@ class NewsItemBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 6.0),
+      padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
       child: Container(
         height:
             kHeightConditions(context, valueIsTrue: 305.0, valueIsFalse: 400.0),

@@ -1,8 +1,7 @@
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/category_active.dart';
-import 'package:amanh_news_app/core/styles/app_colors.dart';
-import 'package:amanh_news_app/core/styles/assets/assets_font_family.dart';
 import 'package:amanh_news_app/core/styles/box_decorations.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
+import 'package:amanh_news_app/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class NewsCategoriesItemBuilder extends StatelessWidget {
@@ -20,7 +19,7 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-          const EdgeInsetsDirectional.symmetric(horizontal: 4.0, vertical: 8.0),
+          const EdgeInsetsDirectional.symmetric(horizontal: 4.0, vertical: 0.0),
       child: Container(
         width: kWidthConditions(
           context,
@@ -62,21 +61,8 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 10.0),
                 child: Text(
                   nameCategory,
-                  style: TextStyle(
-                    color: AppColor.red,
-                    fontFamily: isActive
-                        ? AssetsFontFamily.bitter400
-                        : AssetsFontFamily.bitter300,
-                    fontSize: kWidthConditionsFonts(
-                      context,
-                      isConditions: isActive,
-                      fontSizeLargeTrue: 13.0,
-                      fontSizeLargeFalse: 16.0,
-                      fontSizeSmallTrue: 10.0,
-                      fontSizeSmallFalse: 12.0,
-                    ),
-                    // isActive ? 13 : 10,
-                  ),
+                  style: TextStyles.categoryTextNameStyle(context,
+                      isActive: isActive),
                 ),
               ),
             ),
