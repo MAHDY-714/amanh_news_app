@@ -1,10 +1,22 @@
-allprojects {
+buildscript {
+    ext.agp_version = '8.5.2'
+    ext.kotlin_version = '2.1.10'
     repositories {
-        google()
-        mavenCentral()
+        google()  // مستودع Google
+        mavenCentral() // مستودع Maven Central
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
+allprojects {
+    repositories {
+        google()  // مستودع Google
+        mavenCentral() // مستودع Maven Central
+    }
+}
 rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"

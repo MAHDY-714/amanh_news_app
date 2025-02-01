@@ -13,7 +13,7 @@ class NewsCategoriesListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height:
-          kHeightConditions(context, valueIsTrue: 165.0, valueIsFalse: 175.0),
+          kHeightConditions(context, valueIsTrue: 150.0, valueIsFalse: 160.0),
       width: kWidth(context),
       child: ListView.builder(
         itemBuilder: ((context, index) => NewsCategoriesItemBuilder(

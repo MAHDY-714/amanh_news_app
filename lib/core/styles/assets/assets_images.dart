@@ -7,6 +7,7 @@ assets/images/categories/business.png assets/images/categories/entertainment.png
   //* Basic path
   static const basicPath = 'assets/images';
   static const basicPathCategories = 'assets/images/categories';
+  static const basicPathSearch = 'assets/images/search';
 
   //* Logo
   static const logo = '${basicPath}/logo.jpg';
@@ -27,4 +28,7 @@ assets/images/categories/business.png assets/images/categories/entertainment.png
     health,
     entertainment,
   ];
+
+ static const searchIcon = '${basicPathSearch}/searchIcon.png';
+ static const noBody = '${basicPathSearch}/noBody.png';
 }
