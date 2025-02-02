@@ -2,6 +2,8 @@ import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/c
 import 'package:amanh_news_app/core/styles/box_decorations.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/styles/text_styles.dart';
+import 'package:amanh_news_app/core/styles/themes/theme%20styles/text_theme.dart';
+import 'package:amanh_news_app/core/styles/themes/theme_app.dart';
 import 'package:flutter/material.dart';
 
 class NewsCategoriesItemBuilder extends StatelessWidget {
@@ -61,7 +63,7 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 10.0),
                 child: Text(
                   nameCategory,
-                  style: TextStyles.categoryTextNameStyle(context,
+                  style: TextThemeApp.themeNameCategory(context,
                       isActive: isActive),
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/styles/text_styles.dart';
+import 'package:amanh_news_app/core/styles/themes/theme%20styles/text_theme.dart';
 import 'package:flutter/material.dart';
 
 class NewsTitleAndDateInItemBuilder extends StatelessWidget {
@@ -24,18 +25,12 @@ class NewsTitleAndDateInItemBuilder extends StatelessWidget {
             Text(
               '$title',
               maxLines: 3,
-              style: TextStyles.titleTextStyle.copyWith(
-                fontSize: kWidthConditions(context,
-                    valueIsTrue: 12.0, valueIsFalse: 16.0),
-              ),
+              style: TextThemeApp.themeTitleNews(context),
             ),
             Text(
               '$date',
               maxLines: 1,
-              style: TextStyles.dateTextStyle.copyWith(
-                fontSize: kWidthConditions(context,
-                    valueIsTrue: 10.0, valueIsFalse: 13.0),
-              ),
+              style: TextThemeApp.themeDateNews(context),
             ),
           ],
         ),

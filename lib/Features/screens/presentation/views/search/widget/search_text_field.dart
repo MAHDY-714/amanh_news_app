@@ -1,6 +1,6 @@
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/assets/assets_images.dart';
-import 'package:amanh_news_app/core/styles/text_styles.dart';
+import 'package:amanh_news_app/core/styles/themes/theme%20styles/input_decoration_theme.dart';
 import 'package:flutter/material.dart';
 
 class SearchTextField extends StatelessWidget {
@@ -30,7 +30,7 @@ class SearchTextField extends StatelessWidget {
             fillColor: AppColor.formFieldColor,
             filled: true,
             hintText: 'Search for the news you care about',
-            hintStyle: TextStyles.hintTextStyle,
+            hintStyle: InputDecorationThemeApp.themeHintStyle(context),
             hintFadeDuration: Duration(seconds: 1),
             suffixIcon: IconButton(
                 onPressed: () {},

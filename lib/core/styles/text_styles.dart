@@ -21,15 +21,19 @@ abstract class TextStyles {
   static const hintTextStyle = TextStyle(
     // fontSize: 10,
     fontSize: 8,
-    height: 3,
+    height: 1,
     letterSpacing: -0.2,
     fontFamily: AssetsFontFamily.bitter200,
     color: AppColor.greyColor,
   );
 
+  static const categoryTextStyle = TextStyle(
+    color: AppColor.red,
+    fontFamily: AssetsFontFamily.bitter300,
+    fontSize: 10,
+  );
   static TextStyle categoryTextNameStyle(context, {required bool isActive}) {
     return TextStyle(
-      color: AppColor.redDeep3,
       fontFamily:
           isActive ? AssetsFontFamily.bitter400 : AssetsFontFamily.bitter300,
       fontSize: kWidthConditionsFonts(

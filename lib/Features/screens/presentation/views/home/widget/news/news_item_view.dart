@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/news/news_image_in_item_view.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/news/news_title_and_date_in_item_view.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
@@ -19,7 +21,7 @@ class NewsItemBuilder extends StatelessWidget {
             kHeightConditions(context, valueIsTrue: 305.0, valueIsFalse: 400.0),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.grey.withOpacity(.2),
+          color: Colors.grey.withValues(alpha: 0.1),
           border: Border.all(
             color: Colors.grey,
             width: 1.0,

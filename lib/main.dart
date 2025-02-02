@@ -1,3 +1,6 @@
+import 'package:amanh_news_app/core/styles/themes/dark_theme.dart';
+import 'package:amanh_news_app/core/styles/themes/light_theme.dart';
+import 'package:amanh_news_app/core/styles/themes/theme_app.dart';
 import 'package:amanh_news_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +14,9 @@ class AMANHNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: ThemeApp.lightThemeMode(context),
+      darkTheme: ThemeApp.darkThemeMode(context),
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       routerConfig: AppRouter.routers,
     );
