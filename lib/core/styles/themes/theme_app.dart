@@ -6,4 +6,6 @@ abstract class ThemeApp {
   static ThemeData lightThemeMode(context) => lightTheme(context);
 
   static ThemeData darkThemeMode(context) => darkTheme(context);
+
+  static noBodyIconColorThemeApp(context) => Theme.of(context).primaryColor;
 }

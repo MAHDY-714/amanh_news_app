@@ -8,6 +8,10 @@ abstract class InputDecorationThemeApp extends ThemeApp {
       Theme.of(context).inputDecorationTheme.enabledBorder;
   static focusedBorderTheme(context) =>
       Theme.of(context).inputDecorationTheme.focusedBorder;
+  static formFieldColorTheme(context) =>
+      Theme.of(context).inputDecorationTheme.fillColor;
+
+  static suffixIconColorTheme(context) => Theme.of(context).inputDecorationTheme.suffixIconColor;    
   static themeHintStyle(context) =>
       Theme.of(context).inputDecorationTheme.hintStyle!.copyWith(
             fontSize: kWidthConditions(
@@ -17,3 +21,9 @@ abstract class InputDecorationThemeApp extends ThemeApp {
             ),
           );
 }
+
+/**
+  * enabledBorder
+  * focusedBorder
+  * fillColor
+ */

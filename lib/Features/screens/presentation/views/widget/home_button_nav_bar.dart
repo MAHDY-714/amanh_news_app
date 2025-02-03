@@ -1,6 +1,7 @@
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/category_active.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
+import 'package:amanh_news_app/core/styles/themes/theme%20styles/navbar_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:icon_broken/icon_broken.dart';
 
@@ -12,7 +13,6 @@ class HomeButtonInNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      backgroundColor: AppColor.redDeep,
       radius: kWidthConditions(context, valueIsTrue: 30.0, valueIsFalse: 35.0),
       child: Stack(
         alignment: Alignment.center,
@@ -28,7 +28,7 @@ class HomeButtonInNavBar extends StatelessWidget {
           FloatingActionButton.large(
             onPressed: () {},
             elevation: 0.0,
-            splashColor: AppColor.red.withOpacity(.05),
+            splashColor: AppColor.red.withValues(alpha: .05),
             child: Icon(
               IconBroken.Home,
               size: kWidthConditions(
@@ -36,12 +36,12 @@ class HomeButtonInNavBar extends StatelessWidget {
                 valueIsTrue: 30.0,
                 valueIsFalse: 40.0,
               ),
-              color: AppColor.red,
+              color: NavBarThemeApp.homeButtonInNavBarTheme(context),
             ),
             backgroundColor: Colors.white,
             shape: CircleBorder(
               side: BorderSide(
-                color: AppColor.redDeep2,
+                color: NavBarThemeApp.borderColorNavBarTheme(context),
                 width: 2,
               ),
             ),

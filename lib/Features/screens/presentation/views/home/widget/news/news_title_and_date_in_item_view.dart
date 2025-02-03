@@ -1,5 +1,3 @@
-import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
-import 'package:amanh_news_app/core/styles/text_styles.dart';
 import 'package:amanh_news_app/core/styles/themes/theme%20styles/text_theme.dart';
 import 'package:flutter/material.dart';
 

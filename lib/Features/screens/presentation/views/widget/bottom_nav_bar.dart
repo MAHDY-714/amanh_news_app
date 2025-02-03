@@ -1,6 +1,6 @@
 import 'package:amanh_news_app/Features/screens/presentation/views/widget/nav_bar_icon_view.dart';
-import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
+import 'package:amanh_news_app/core/styles/themes/theme%20styles/navbar_theme.dart';
 import 'package:amanh_news_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
@@ -23,11 +23,12 @@ class BottomNavBar extends StatelessWidget {
       decoration: BoxDecoration(
         border: BorderDirectional(
           top: BorderSide(
-            color: AppColor.redDeep2,
+            // color: AppColor.redDeep2,
+            color: NavBarThemeApp.borderColorNavBarTheme(context),
             width: 3.0,
           ),
         ),
-        color: AppColor.redDeep,
+        color: NavBarThemeApp.backgroundNavBarTheme(context),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,4 +1,5 @@
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
+import 'package:amanh_news_app/core/styles/themes/theme%20styles/navbar_theme.dart';
 import 'package:flutter/material.dart';
 
 class NavBarIconBuilder extends StatelessWidget {
@@ -16,7 +17,7 @@ class NavBarIconBuilder extends StatelessWidget {
     return IconButton(
       icon: Icon(
         icon,
-        color: color ?? Colors.white,
+        color:NavBarThemeApp.iconColorNavBarTheme(context),
         size: kWidthConditions(
           context,
           valueIsTrue: 25.0,
