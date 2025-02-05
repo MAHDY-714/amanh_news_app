@@ -46,15 +46,7 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
               ),
               decoration:
                   BoxDecorations.newsCategoryDecoration(image: imageCategory),
-              // decoration: BoxDecoration(
-              //   color: Colors.blue,
-              //   borderRadius: BorderRadius.circular(16.0),
-              //   image: DecorationImage(
-              //     fit: BoxFit.cover,
-              //     image: AssetImage(AssetsImages.newsCategoriesImages[0]),
-              //   ),
-              // ),
-            ),
+                    ),
             SizedBox(
               height: 40,
               child: Padding(
@@ -69,6 +61,7 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
             CategoryActive(
               // radius: 10,
               isActive: isActive,
+              
             ),
             if (isActive)
               SizedBox(

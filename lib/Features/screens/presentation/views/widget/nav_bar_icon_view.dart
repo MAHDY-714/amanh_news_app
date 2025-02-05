@@ -17,7 +17,7 @@ class NavBarIconBuilder extends StatelessWidget {
     return IconButton(
       icon: Icon(
         icon,
-        color:NavBarThemeApp.iconColorNavBarTheme(context),
+        color: NavBarThemeApp.iconColorNavBarTheme(context),
         size: kWidthConditions(
           context,
           valueIsTrue: 25.0,

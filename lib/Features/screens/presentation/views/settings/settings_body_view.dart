@@ -1,3 +1,4 @@
+import 'package:amanh_news_app/core/widget/body_color.dart';
 import 'package:flutter/material.dart';
 
 class SettingsBodyView extends StatelessWidget {
@@ -5,10 +6,12 @@ class SettingsBodyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text('my home news screen'),
-      ],
+    return BodyColor(
+      child: Column(
+        children: [
+          Text('my home news screen'),
+        ],
+      ),
     );
   }
 }

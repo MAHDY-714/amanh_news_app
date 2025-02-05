@@ -31,13 +31,16 @@ ThemeData lightTheme(context) {
       fillColor: AppColor.formFieldColor,
       filled: true,
     ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: Colors.white,
+      foregroundColor: AppColor.redDeep,
+      hoverColor: AppColor.borderHomeNavBar,
+    ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: AppColor.redDeep2,
+        backgroundColor: AppColor.redDeep4,
         // elevation: 10.0,
-        selectedItemColor: Colors.white,
+        selectedItemColor: AppColor.redLight,
         unselectedItemColor: AppColor.redDeep3,
-        selectedIconTheme: IconThemeData(
-          color: AppColor.redDeep3,
-        )),
+        selectedIconTheme: IconThemeData(color: Colors.white)),
   );
 }

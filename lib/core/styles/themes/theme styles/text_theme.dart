@@ -8,15 +8,15 @@ abstract class TextThemeApp extends ThemeApp {
   static themeNameCategory(context, {required bool isActive}) =>
       Theme.of(context).textTheme.titleLarge!.copyWith(
             fontFamily: isActive
-                ? AssetsFontFamily.bitter400
-                : AssetsFontFamily.bitter300,
+                ? AssetsFontFamily.bitter900
+                : AssetsFontFamily.bitter600,
             fontSize: kWidthConditionsFonts(
               context,
               isConditions: isActive,
-              fontSizeLargeTrue: 13.0,
-              fontSizeLargeFalse: 16.0,
-              fontSizeSmallTrue: 10.0,
-              fontSizeSmallFalse: 12.0,
+              fontSizeLargeTrue: 15.0,
+              fontSizeLargeFalse: 18.0,
+              fontSizeSmallTrue: 11.0,
+              fontSizeSmallFalse: 13.0,
             ),
           );
   static themeTitleNews(context) =>

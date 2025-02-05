@@ -6,10 +6,10 @@ abstract class NavBarThemeApp extends ThemeApp {
 
   static backgroundNavBarTheme(context) =>
       Theme.of(context).bottomNavigationBarTheme.backgroundColor;
-  static iconColorNavBarTheme(context) =>
+  static selectItemColorNavBarTheme(context) =>
       Theme.of(context).bottomNavigationBarTheme.selectedItemColor;
   static borderColorNavBarTheme(context) =>
       Theme.of(context).bottomNavigationBarTheme.unselectedItemColor;
-  static homeButtonInNavBarTheme(context) =>
+  static iconColorNavBarTheme(context) =>
       Theme.of(context).bottomNavigationBarTheme.selectedIconTheme!.color!;
 }

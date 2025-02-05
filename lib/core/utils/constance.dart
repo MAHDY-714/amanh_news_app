@@ -13,3 +13,5 @@ const kNewsCategoriesName = [
   'Entertainment',
   'General',
 ];
+
+bool mode = false;
