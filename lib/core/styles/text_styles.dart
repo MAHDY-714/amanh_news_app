@@ -9,14 +9,14 @@ abstract class TextStyles {
   static const titleTextStyle = TextStyle(
     // fontSize: 12,
     fontSize: 16,
-    fontFamily: AssetsFontFamily.platypi900,
-    color: Colors.black,
+    fontFamily: AssetsFontFamily.bitter900,
+    color: AppColor.black,
   );
   static const dateTextStyle = TextStyle(
     // fontSize: 10,
-    fontSize: 13,
+    fontSize: 15,
     fontFamily: AssetsFontFamily.bitter300,
-    color: Colors.black87,
+    color: AppColor.black87,
   );
   static const hintTextStyle = TextStyle(
     // fontSize: 10,
@@ -24,14 +24,23 @@ abstract class TextStyles {
     height: 1,
     letterSpacing: -0.2,
     fontFamily: AssetsFontFamily.bitter200,
-    color: AppColor.greyColor,
+    color: AppColor.black26,
+  );
+  static const formFieldTextStyle = TextStyle(
+    // fontSize: 10,
+    fontSize: 12,
+    height: 1,
+    // letterSpacing: -0.2,
+    fontFamily: AssetsFontFamily.bitter700,
+    color: AppColor.black,
   );
 
   static const categoryTextStyle = TextStyle(
-    color: AppColor.red,
+    color: AppColor.red2,
     fontFamily: AssetsFontFamily.bitter300,
     fontSize: 10,
   );
+
   static TextStyle categoryTextNameStyle(context, {required bool isActive}) {
     return TextStyle(
       fontFamily:

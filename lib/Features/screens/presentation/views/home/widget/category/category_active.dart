@@ -1,6 +1,5 @@
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/themes/theme%20styles/navbar_theme.dart';
-import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +29,7 @@ class CategoryActive extends StatelessWidget {
             glowRadiusFactor: glowRadiusFactor ?? 1.0,
             child: CircleAvatar(
               radius: radius ?? 5.0,
-              backgroundColor: AppColor.red,
+              backgroundColor: AppColor.red2,
               child: child ?? null,
             ))
         : CircleAvatar(

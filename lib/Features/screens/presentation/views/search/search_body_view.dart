@@ -10,26 +10,28 @@ class SearchBodyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BodyColor(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            SearchTextField(),
-            Expanded(
-              child: Container(
-                // color: AppColor.redDeep4,
-                alignment: Alignment.center,
-                child: Image.asset(
-                  AssetsImages.noBody,
-                  // color: Colors.white70,
-                  color: ThemeApp.noBodyIconColorThemeApp(context),
-                  height: 200,
-                  width: 200,
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              SearchTextField(),
+              Expanded(
+                child: Container(
+                  // color: AppColor.redDeep4,
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                    AssetsImages.noBody,
+                    // color: Colors.white70,
+                    color: ThemeApp.noBodyIconColorThemeApp(context),
+                    height: 250,
+                    // width: 200,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

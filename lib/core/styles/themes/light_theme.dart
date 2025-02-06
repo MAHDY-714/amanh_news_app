@@ -4,43 +4,45 @@ import 'package:flutter/material.dart';
 
 ThemeData lightTheme(context) {
   return ThemeData.light().copyWith(
-    scaffoldBackgroundColor: Colors.white,
-    primaryColor: AppColor.redDeep3,
+    scaffoldBackgroundColor: AppColor.white,
+    primaryColor: AppColor.redDeep,
+    hoverColor: AppColor.white,
+    dividerColor: AppColor.black26,
     textTheme: TextTheme(
       titleLarge: TextStyles.categoryTextStyle,
       titleMedium: TextStyles.titleTextStyle,
       titleSmall: TextStyles.dateTextStyle,
+      displayMedium: TextStyles.formFieldTextStyle,
     ),
     inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyles.hintTextStyle,
-      suffixIconColor: AppColor.greyColor,
+      suffixIconColor: AppColor.black26,
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
         borderSide: BorderSide(
-          color: AppColor.greyColor,
+          color: AppColor.black26,
           width: 1.5,
         ),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
         borderSide: BorderSide(
-          color: AppColor.redDeep3,
+          color: AppColor.redDeep,
           width: 2.5,
         ),
       ),
-      fillColor: AppColor.formFieldColor,
+      fillColor: AppColor.white90,
       filled: true,
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
-      backgroundColor: Colors.white,
-      foregroundColor: AppColor.redDeep,
-      hoverColor: AppColor.borderHomeNavBar,
+      backgroundColor: AppColor.white90,
+      foregroundColor: AppColor.red2,
+      hoverColor: AppColor.redDeep2,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: AppColor.redDeep4,
-        // elevation: 10.0,
-        selectedItemColor: AppColor.redLight,
-        unselectedItemColor: AppColor.redDeep3,
-        selectedIconTheme: IconThemeData(color: Colors.white)),
+        backgroundColor: AppColor.redDeep6,
+        selectedItemColor: AppColor.pink2,
+        unselectedItemColor: AppColor.redDeep,
+        selectedIconTheme: IconThemeData(color: AppColor.white)),
   );
 }

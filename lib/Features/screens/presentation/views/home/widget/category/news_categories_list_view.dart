@@ -13,13 +13,13 @@ class NewsCategoriesListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height:
-          kHeightConditions(context, valueIsTrue: 150.0, valueIsFalse: 160.0),
+          kHeightConditions(context, valueIsTrue: 140.0, valueIsFalse: 160.0),
       width: kWidth(context),
       child: ListView.builder(
         itemBuilder: ((context, index) => NewsCategoriesItemBuilder(
               imageCategory: AssetsImages.newsCategoriesImages[index],
               nameCategory: kNewsCategoriesName[index],
-              isActive: index == 0 ? true : false,
+              isActive: index == 5 ? true : false,
             )),
         itemCount: kNewsCategoriesName.length - 1,
         scrollDirection: Axis.horizontal,

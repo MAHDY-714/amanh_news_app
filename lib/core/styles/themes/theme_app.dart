@@ -14,4 +14,6 @@ abstract class ThemeApp {
   }
 
   static noBodyIconColorThemeApp(context) => Theme.of(context).primaryColor;
+  static backgroundNewsItemColorThemeApp(context) => Theme.of(context).hoverColor;
+  static borderNewsItemColorThemeApp(context) => Theme.of(context).dividerColor;
 }

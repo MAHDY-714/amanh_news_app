@@ -11,13 +11,22 @@ abstract class InputDecorationThemeApp extends ThemeApp {
   static formFieldColorTheme(context) =>
       Theme.of(context).inputDecorationTheme.fillColor;
 
-  static suffixIconColorTheme(context) => Theme.of(context).inputDecorationTheme.suffixIconColor;    
+  static suffixIconColorTheme(context) =>
+      Theme.of(context).inputDecorationTheme.suffixIconColor;
   static themeHintStyle(context) =>
       Theme.of(context).inputDecorationTheme.hintStyle!.copyWith(
             fontSize: kWidthConditions(
               context,
               valueIsTrue: 10.0,
               valueIsFalse: 12.0,
+            ),
+          );
+  static themeFormFieldStyle(context) =>
+      Theme.of(context).textTheme.displayMedium!.copyWith(
+            fontSize: kWidthConditions(
+              context,
+              valueIsTrue: 13.0,
+              valueIsFalse: 17.0,
             ),
           );
 }

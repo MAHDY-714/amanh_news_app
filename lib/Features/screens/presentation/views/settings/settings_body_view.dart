@@ -7,10 +7,13 @@ class SettingsBodyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BodyColor(
-      child: Column(
-        children: [
-          Text('my home news screen'),
-        ],
+      child: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text('my home news screen'),
+          ],
+        ),
       ),
     );
   }

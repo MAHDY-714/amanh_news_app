@@ -1,5 +1,5 @@
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/category_active.dart';
-import 'package:amanh_news_app/core/styles/box_decorations.dart';
+import 'package:amanh_news_app/core/styles/decorations.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/styles/themes/theme%20styles/text_theme.dart';
 import 'package:flutter/material.dart';
@@ -19,12 +19,12 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-          const EdgeInsetsDirectional.symmetric(horizontal: 4.0, vertical: 0.0),
+          const EdgeInsetsDirectional.symmetric(horizontal: 4.0, vertical: 4.0),
       child: Container(
         width: kWidthConditions(
           context,
-          valueIsTrue: kWidth(context) * .35,
-          valueIsFalse: kWidth(context) * .36,
+          valueIsTrue: kWidth(context) * .34,
+          valueIsFalse: kWidth(context) * .35,
         ),
         decoration: BoxDecoration(
           color: Colors.transparent,
@@ -42,31 +42,28 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
               width: kWidthConditions(
                 context,
                 valueIsTrue: kWidth(context) * .4,
-                valueIsFalse: kWidth(context) * .35,
+                valueIsFalse: kWidth(context) * .34,
               ),
               decoration:
-                  BoxDecorations.newsCategoryDecoration(image: imageCategory),
-                    ),
-            SizedBox(
-              height: 40,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 10.0),
-                child: Text(
-                  nameCategory,
-                  style: TextThemeApp.themeNameCategory(context,
-                      isActive: isActive),
-                ),
+                  Decorations.newsCategoryDecoration(image: imageCategory),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 4.0),
+              child: Text(
+                nameCategory,
+                style:
+                    TextThemeApp.themeNameCategory(context, isActive: isActive),
               ),
             ),
             CategoryActive(
-              // radius: 10,
-              isActive: isActive,
-              
-            ),
-            if (isActive)
-              SizedBox(
-                height: 10,
+              radius: kHeightConditions(
+                context,
+                valueIsTrue: 5.0,
+                valueIsFalse: 6.0,
               ),
+              isActive: isActive,
+            ),
+            // if (isActive) Spacer(),
           ],
         ),
       ),
