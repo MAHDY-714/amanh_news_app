@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 ThemeData darkTheme(context) {
   return ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppColor.transparent,
+        brightness: Brightness.light,
     // applyElevationOverlayColor: false,
     // brightness: SystemUiOverlayStyle(
     //   statusBarColor: AppColor.redDeep,
@@ -13,12 +14,14 @@ ThemeData darkTheme(context) {
     primaryColor: AppColor.white38,
     hoverColor: AppColor.redDeep6,
     dividerColor: AppColor.white24,
+    indicatorColor: AppColor.redDeep3,
+    disabledColor: AppColor.white12,
     textTheme: TextTheme(
       titleLarge: TextStyles.categoryTextStyle.copyWith(
         color: AppColor.white70,
       ),
       titleMedium: TextStyles.titleTextStyle.copyWith(
-        color: AppColor.white70,
+        color: AppColor.white80,
       ),
       titleSmall: TextStyles.dateTextStyle.copyWith(
         color: AppColor.white38,
@@ -42,7 +45,7 @@ ThemeData darkTheme(context) {
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
         borderSide: BorderSide(
-          color: AppColor.redDeep3,
+          color: AppColor.white90,
           width: 2.0,
         ),
       ),

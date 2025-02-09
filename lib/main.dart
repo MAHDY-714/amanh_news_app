@@ -14,7 +14,7 @@ class AMANHNews extends StatelessWidget {
     return MaterialApp.router(
       theme: ThemeApp.lightThemeMode(context),
       darkTheme: ThemeApp.darkThemeMode(context),
-      themeMode: ThemeApp.getThemeMode(isDark: true),
+      themeMode: ThemeApp.getThemeMode(isDark: false),
       debugShowCheckedModeBanner: false,
       routerConfig: AppRouter.routers,
     );

@@ -27,6 +27,6 @@ abstract class TextThemeApp extends ThemeApp {
   static themeDateNews(context) =>
       Theme.of(context).textTheme.titleSmall!.copyWith(
             fontSize:
-                kWidthConditions(context, valueIsTrue: 8.0, valueIsFalse: 11.0),
+                kWidthConditions(context, valueIsTrue: 9.0, valueIsFalse: 12.0),
           );
 }

@@ -1,4 +1,4 @@
-import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/category_active.dart';
+import 'package:amanh_news_app/core/widget/item_active.dart';
 import 'package:amanh_news_app/core/styles/decorations.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/styles/themes/theme%20styles/text_theme.dart';
@@ -55,7 +55,7 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
                     TextThemeApp.themeNameCategory(context, isActive: isActive),
               ),
             ),
-            CategoryActive(
+            ItemIsActive(
               radius: kHeightConditions(
                 context,
                 valueIsTrue: 5.0,

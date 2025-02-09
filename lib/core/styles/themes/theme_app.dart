@@ -9,11 +9,17 @@ abstract class ThemeApp {
   static ThemeData darkThemeMode(context) => darkTheme(context);
 
   static ThemeMode getThemeMode({required bool isDark}) {
-    mode = isDark;
+    kMode = isDark;
     return isDark ? ThemeMode.dark : ThemeMode.light;
   }
 
   static noBodyIconColorThemeApp(context) => Theme.of(context).primaryColor;
-  static backgroundNewsItemColorThemeApp(context) => Theme.of(context).hoverColor;
+  static backgroundNewsItemColorThemeApp(context) =>
+      Theme.of(context).hoverColor;
   static borderNewsItemColorThemeApp(context) => Theme.of(context).dividerColor;
+
+  static borderItemSelectThemeColorThemeApp(context, {required isActive}) =>
+      isActive
+          ? Theme.of(context).indicatorColor
+          : Theme.of(context).disabledColor;
 }

@@ -33,7 +33,7 @@ class BottomNavBar extends StatelessWidget {
         gradient: LinearGradient(
           begin: AlignmentDirectional.topStart,
           end: AlignmentDirectional.bottomEnd,
-          colors: mode
+          colors: kMode
               ? AppColor.navBarColorDarkTheme
               : AppColor.navBarColorLightTheme,
         ),

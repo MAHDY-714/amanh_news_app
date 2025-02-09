@@ -3,8 +3,8 @@ import 'package:amanh_news_app/core/styles/themes/theme%20styles/navbar_theme.da
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 
-class CategoryActive extends StatelessWidget {
-  const CategoryActive({
+class ItemIsActive extends StatelessWidget {
+  const ItemIsActive({
     super.key,
     this.radius,
     this.glowRadiusFactor,
@@ -35,6 +35,7 @@ class CategoryActive extends StatelessWidget {
         : CircleAvatar(
             radius: radius ?? 5.0,
             backgroundColor: Colors.transparent,
+            child: child,
           );
   }
 }

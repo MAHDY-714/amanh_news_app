@@ -1,13 +1,17 @@
 abstract class AssetsImages {
   AssetsImages._();
 /*
-assets/images/categories/business.png assets/images/categories/entertainment.png assets/images/categories/health.png assets/images/categories/science.jpg assets/images/categories/sport.png assets/images/categories/technology.jpg assets/images/logo.jpg
+home_ui_dark.jpg 
+home_ui_light.jpg 
+search_ui_dark.jpg 
+search_ui_light.jpg
  */
 
   //* Basic path
   static const basicPath = 'assets/images';
   static const basicPathCategories = 'assets/images/categories';
   static const basicPathSearch = 'assets/images/search';
+  static const basicPathTheme = 'assets/images/theme';
 
   //* Logo
   static const logo = '${basicPath}/logo.jpg';
@@ -19,6 +23,12 @@ assets/images/categories/business.png assets/images/categories/entertainment.png
   static const science = '${basicPathCategories}/science.jpg';
   static const sport = '${basicPathCategories}/sport.png';
   static const technology = '${basicPathCategories}/technology.jpg';
+  
+  //*Theme
+  static const homeDark = '${basicPathTheme}/home_ui_dark.jpg';
+  static const homeLight = '${basicPathTheme}/home_ui_light.jpg';
+  static const searchDark = '${basicPathTheme}/search_ui_dark.jpg';
+  static const searchLight = '${basicPathTheme}/search_ui_light.jpg';
 
   static const newsCategoriesImages = [
     technology,

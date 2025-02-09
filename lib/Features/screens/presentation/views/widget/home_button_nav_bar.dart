@@ -1,4 +1,4 @@
-import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/category_active.dart';
+import 'package:amanh_news_app/core/widget/item_active.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/styles/themes/theme%20styles/floating_action_button_theme.dart';
@@ -9,8 +9,8 @@ class HomeButtonInNavBar extends StatelessWidget {
   const HomeButtonInNavBar({super.key});
   @override
   Widget build(BuildContext context) {
-    return CategoryActive(
-      isActive: true,
+    return ItemIsActive(
+      isActive: false,
       radius: kWidthConditions(
         context,
         valueIsTrue: 29.0,

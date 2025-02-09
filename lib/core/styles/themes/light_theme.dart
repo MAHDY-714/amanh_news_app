@@ -5,9 +5,12 @@ import 'package:flutter/material.dart';
 ThemeData lightTheme(context) {
   return ThemeData.light().copyWith(
     scaffoldBackgroundColor: AppColor.white,
+    brightness: Brightness.dark,
     primaryColor: AppColor.redDeep,
     hoverColor: AppColor.white,
     dividerColor: AppColor.black26,
+    indicatorColor: AppColor.red,
+    disabledColor: AppColor.black26,
     textTheme: TextTheme(
       titleLarge: TextStyles.categoryTextStyle,
       titleMedium: TextStyles.titleTextStyle,

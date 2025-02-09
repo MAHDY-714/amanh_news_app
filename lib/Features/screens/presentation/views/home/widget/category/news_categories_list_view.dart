@@ -19,7 +19,7 @@ class NewsCategoriesListView extends StatelessWidget {
         itemBuilder: ((context, index) => NewsCategoriesItemBuilder(
               imageCategory: AssetsImages.newsCategoriesImages[index],
               nameCategory: kNewsCategoriesName[index],
-              isActive: index == 5 ? true : false,
+              isActive: index == 0 ? true : false,
             )),
         itemCount: kNewsCategoriesName.length - 1,
         scrollDirection: Axis.horizontal,

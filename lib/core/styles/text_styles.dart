@@ -8,8 +8,9 @@ abstract class TextStyles {
 
   static const titleTextStyle = TextStyle(
     // fontSize: 12,
+    overflow: TextOverflow.ellipsis,
     fontSize: 16,
-    fontFamily: AssetsFontFamily.bitter900,
+    fontFamily: AssetsFontFamily.bitter700,
     color: AppColor.black,
   );
   static const dateTextStyle = TextStyle(
