@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 ThemeData darkTheme(context) {
   return ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppColor.transparent,
-        brightness: Brightness.light,
+    brightness: Brightness.light,
     // applyElevationOverlayColor: false,
     // brightness: SystemUiOverlayStyle(
     //   statusBarColor: AppColor.redDeep,

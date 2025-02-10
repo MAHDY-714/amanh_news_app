@@ -35,7 +35,7 @@ abstract class Decorations {
     );
   }
 
-  static   InputDecoration InputFormFieldDecoration(context) {
+  static InputDecoration InputFormFieldDecoration(context) {
     return InputDecoration(
         contentPadding: EdgeInsetsDirectional.symmetric(
             horizontal: 8,
@@ -60,5 +60,4 @@ abstract class Decorations {
                   AssetsImages.searchIcon,
                 ))));
   }
-
 }

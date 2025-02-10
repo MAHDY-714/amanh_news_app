@@ -30,7 +30,6 @@ dynamic kHeightConditions(
 
 dynamic kWidthConditionsFonts(
   context, {
-    
   required bool isConditions,
   required fontSizeLargeTrue,
   required fontSizeLargeFalse,
@@ -57,11 +56,11 @@ dynamic kHeightConditionsFonts(
   required bool isConditions,
 }) {
   if (isConditions) {
-  return kHeight(context) >= 760 && kHeight(context) <= 850
+    return kHeight(context) >= 760 && kHeight(context) <= 850
         ? fontSizeLargeTrue
         : fontSizeLargeFalse;
   } else {
-  return kHeight(context) >= 760 && kHeight(context) <= 850
+    return kHeight(context) >= 760 && kHeight(context) <= 850
         ? fontSizeSmallTrue
         : fontSizeSmallFalse;
   }
