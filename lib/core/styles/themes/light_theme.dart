@@ -16,6 +16,7 @@ ThemeData lightTheme(context) {
       titleMedium: TextStyles.titleTextStyle,
       titleSmall: TextStyles.dateTextStyle,
       displayMedium: TextStyles.formFieldTextStyle,
+      labelMedium: TextStyles.errorTextStyle,
     ),
     inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyles.hintTextStyle,
@@ -43,9 +44,12 @@ ThemeData lightTheme(context) {
       hoverColor: AppColor.redDeep2,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: AppColor.redDeep6,
-        selectedItemColor: AppColor.pink2,
-        unselectedItemColor: AppColor.redDeep,
-        selectedIconTheme: IconThemeData(color: AppColor.white)),
+      backgroundColor: AppColor.redDeep6,
+      selectedItemColor: AppColor.pink2,
+      unselectedItemColor: AppColor.redDeep,
+      selectedIconTheme: IconThemeData(
+        color: AppColor.white,
+      ),
+    ),
   );
 }

@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 
 import 'source.dart';
 
-class Article extends Equatable {
+class ArticleNewsModel extends Equatable {
   final Source? source;
   final String? author;
   final String? title;
@@ -12,7 +12,7 @@ class Article extends Equatable {
   final String? publishedAt;
   final String? content;
 
-  const Article({
+  const ArticleNewsModel({
     this.source,
     this.author,
     this.title,
@@ -23,7 +23,8 @@ class Article extends Equatable {
     this.content,
   });
 
-  factory Article.fromJson(Map<String, dynamic> json) => Article(
+  factory ArticleNewsModel.fromJson(Map<String, dynamic> json) =>
+      ArticleNewsModel(
         source: json['source'] == null
             ? null
             : Source.fromJson(json['source'] as Map<String, dynamic>),

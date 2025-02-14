@@ -29,6 +29,9 @@ ThemeData darkTheme(context) {
       displayMedium: TextStyles.formFieldTextStyle.copyWith(
         color: AppColor.white70,
       ),
+      labelMedium: TextStyles.errorTextStyle.copyWith(
+        color: AppColor.redDeep3,
+      ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyles.hintTextStyle.copyWith(

@@ -41,6 +41,11 @@ abstract class TextStyles {
     fontFamily: AssetsFontFamily.bitter300,
     fontSize: 10,
   );
+  static const errorTextStyle = TextStyle(
+    color: AppColor.red2,
+    fontFamily: AssetsFontFamily.bitter900,
+    fontSize: 17,
+  );
 
   static TextStyle categoryTextNameStyle(context, {required bool isActive}) {
     return TextStyle(

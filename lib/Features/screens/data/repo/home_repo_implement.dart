@@ -1,4 +1,4 @@
-import 'package:amanh_news_app/Features/screens/data/model/news_model/news_model.dart';
+import 'package:amanh_news_app/Features/screens/data/model/news_model/article_news_model.dart';
 import 'package:amanh_news_app/Features/screens/data/repo/home_repo.dart';
 import 'package:amanh_news_app/core/services/api_services.dart';
 import 'package:amanh_news_app/core/services/errors/failures.dart';
@@ -11,13 +11,13 @@ class HomeRepoImplement implements HomeRepo {
 
   HomeRepoImplement(this.apiServices);
   @override
-  Future<Either<Failures, List<NewsModel>>> getNews(
+  Future<Either<Failures, List<ArticleNewsModel>>> getNews(
       {required String category}) async {
     try {
       var data = await apiServices.getNews(category: category);
-      List<NewsModel> newsModelList = [];
+      List<ArticleNewsModel> newsModelList = [];
       for (var newsItem in data['articles']) {
-        newsModelList.add(NewsModel.fromJson(newsItem));
+        newsModelList.add(ArticleNewsModel.fromJson(newsItem));
       }
       return right(newsModelList);
     } catch (e) {
