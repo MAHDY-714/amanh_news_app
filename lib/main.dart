@@ -22,7 +22,7 @@ class AMANHNews extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => HomeCubit(HomeRepoImplement(ApiServices(dio: Dio())))
-        ..getHomeData(category: kNewsCategoriesName[6]),
+        ..getHomeData(category: kNewsCategoriesName.last),
       child: MaterialApp.router(
         theme: ThemeApp.lightThemeMode(context),
         darkTheme: ThemeApp.darkThemeMode(context),

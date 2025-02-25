@@ -1,15 +1,15 @@
 part of 'home_cubit.dart';
 
-sealed class HomeState{}
+sealed class HomeState {}
 
 final class HomeInitialState extends HomeState {}
 
 final class HomeLoadingState extends HomeState {}
 
 final class HomeSuccessState extends HomeState {
-    final List<ArticleNewsModel>? articleNewsModel;
+  final List<ArticlesNewsModel>? articlesNewsModel;
 
-  HomeSuccessState({required this.articleNewsModel});
+  HomeSuccessState({required this.articlesNewsModel});
 }
 
 final class HomeFailuresState extends HomeState {

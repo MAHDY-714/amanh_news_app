@@ -1,11 +1,11 @@
+import 'package:amanh_news_app/Features/screens/data/model/articles_news_model/articles_news_model.dart';
 import 'package:amanh_news_app/Features/screens/data/model/news_model/article_news_model.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/news/news_item_view.dart';
 import 'package:flutter/material.dart';
 
 class NewsListView extends StatelessWidget {
-  const NewsListView(
-      {super.key, required this.articleNewsModel});
-  final List<ArticleNewsModel>? articleNewsModel;
+  const NewsListView({super.key, required this.articlesNewsModel});
+  final List<ArticlesNewsModel>? articlesNewsModel;
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,10 @@ class NewsListView extends StatelessWidget {
         child: ListView.builder(
           itemBuilder: (context, index) {
             return NewsItemBuilder(
-              articleNewsModel: articleNewsModel![index],
+              articlesNewsModel: articlesNewsModel![index],
             );
           },
-          itemCount: articleNewsModel!.length,
+          itemCount: articlesNewsModel!.length,
           scrollDirection: Axis.vertical,
           physics: BouncingScrollPhysics(),
           shrinkWrap: true,

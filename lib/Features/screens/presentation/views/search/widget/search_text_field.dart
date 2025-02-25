@@ -13,7 +13,7 @@ class SearchTextField extends StatelessWidget {
       style: InputDecorationThemeApp.themeFormFieldStyle(context),
       // selectionHeightStyle: BoxHeightStyle.includeLineSpacingBottom,
 
-      decoration: Decorations.InputFormFieldDecoration(context),
+      decoration: Decorations.inputFormFieldDecoration(context),
     );
   }
 }

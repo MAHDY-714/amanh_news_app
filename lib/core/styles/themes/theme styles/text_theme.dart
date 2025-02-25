@@ -31,7 +31,7 @@ abstract class TextThemeApp extends ThemeApp {
           );
   static themTextError(context) =>
       Theme.of(context).textTheme.labelMedium!.copyWith(
-            fontSize:
-                kWidthConditions(context, valueIsTrue: 15.0, valueIsFalse: 17.0),
+            fontSize: kWidthConditions(context,
+                valueIsTrue: 15.0, valueIsFalse: 17.0),
           );
 }

@@ -14,8 +14,9 @@ class HomeBodyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var articleNewsModel = BlocProvider.of<HomeCubit>(context).articleNewsModel;
-    log(articleNewsModel.toString());
+    var articlesNewsModel =
+        BlocProvider.of<HomeCubit>(context).articlesNewsModel;
+    log(articlesNewsModel.toString());
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (BuildContext context, HomeState state) {
         return Padding(
@@ -30,7 +31,7 @@ class HomeBodyView extends StatelessWidget {
                 ) {
                   if (state is HomeSuccessState) {
                     return NewsListView(
-                        articleNewsModel: state.articleNewsModel);
+                        articlesNewsModel: state.articlesNewsModel);
                   } else if (state is HomeFailuresState) {
                     return NoBodyView(
                       errorMessage: state.errorMessage,

@@ -11,10 +11,10 @@ const kNewsCategoriesName = [
   'Technology',
   'Business',
   'Science',
-  'Sport',
+  'Sports',
   'Health',
   'Entertainment',
-  'General',
+  'World',
 ];
 
 bool kMode = false;

@@ -16,6 +16,7 @@ ThemeData darkTheme(context) {
     dividerColor: AppColor.white24,
     indicatorColor: AppColor.redDeep3,
     disabledColor: AppColor.white12,
+    cardColor: AppColor.redDeep5,
     textTheme: TextTheme(
       titleLarge: TextStyles.categoryTextStyle.copyWith(
         color: AppColor.white70,
@@ -65,5 +66,9 @@ ThemeData darkTheme(context) {
         selectedItemColor: AppColor.red,
         unselectedItemColor: AppColor.redDeep10,
         selectedIconTheme: IconThemeData(color: AppColor.white54)),
+    progressIndicatorTheme: ProgressIndicatorThemeData(
+      circularTrackColor: AppColor.redDeep8,
+      color: AppColor.redDeep10,
+    ),
   );
 }

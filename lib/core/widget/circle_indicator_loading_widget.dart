@@ -1,11 +1,27 @@
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
+import 'package:amanh_news_app/core/styles/themes/theme%20styles/progress_indicator_theme.dart';
 import 'package:flutter/material.dart';
 
 class CircleIndicatorLoadingWidget extends StatelessWidget {
   const CircleIndicatorLoadingWidget({
     super.key,
+    this.radiusOut,
+    this.radiusIn,
+    this.strokeWidth,
+    this.strokeAlign,
+    this.strokeAlign2,
+    this.outlinedIndicatorColor,
+    this.progressIndicatorTrackColor,
   });
+
+  final double? radiusOut;
+  final double? radiusIn;
+  final double? strokeWidth;
+  final double? strokeAlign;
+  final double? strokeAlign2;
+  final Color? outlinedIndicatorColor;
+  final Color? progressIndicatorTrackColor;
 
   @override
   Widget build(BuildContext context) {
@@ -14,23 +30,26 @@ class CircleIndicatorLoadingWidget extends StatelessWidget {
       child: SizedBox(
         height: kHeight(context) * .4,
         child: CircleAvatar(
-          radius: 37,
-          backgroundColor: AppColor.redDeep6,
+          radius: 2 * (radiusOut ?? 15.2),
+          backgroundColor: outlinedIndicatorColor ??
+              ProgressIndicatorThemeApp.outlinedIndicatorColorTheme(context), //
+          // backgroundColor: AppColor.white12,
+
           child: CircleAvatar(
-            radius: 35,
-            backgroundColor: AppColor.redDeep7,
-            child: Stack(
-              alignment: AlignmentDirectional.center,
-              children: [
-                for (int i = 1; i <= 4; i++)
-                  CircularProgressIndicator(
-                    strokeWidth: i.toDouble() + 1.7,
-                    backgroundColor: AppColor.redDeep6,
-                    valueColor:
-                        const AlwaysStoppedAnimation<Color>(AppColor.pink2),
-                    strokeAlign: (i * .6) + .8,
-                  ),
-              ],
+            radius: radiusIn ?? 15.0,
+            // backgroundColor: AppColor.red, // dark
+            backgroundColor: outlinedIndicatorColor ??
+                ProgressIndicatorThemeApp.outlinedIndicatorColorTheme(
+                    context), // l
+            child: CircularProgressIndicator(
+              strokeWidth: 1.0 + (strokeWidth ?? 16.0),
+              // backgroundColor: colors[i], // dark
+              backgroundColor: progressIndicatorTrackColor ??
+                  ProgressIndicatorThemeApp.progressIndicatorTrackColorTheme(
+                      context),
+              strokeCap: StrokeCap.butt,
+              valueColor: const AlwaysStoppedAnimation<Color>(AppColor.pink2),
+              strokeAlign: 1,
             ),
           ),
         ),

@@ -13,7 +13,9 @@ abstract class AppColor {
   static const redDeep5 = Color(0xFF2F0101);
   static const redDeep6 = Color(0xFF270000);
   static const redDeep7 = Color(0xFF230401);
+  static const redDeep8 = Color(0xFF200503);
   static const redDeep10 = Color(0x09FF1100);
+
   static const black26 = Colors.black26;
   static const black87 = Colors.black87;
   static const black = Colors.black;

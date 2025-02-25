@@ -1,8 +1,8 @@
+import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/assets/assets_images.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/styles/themes/theme%20styles/input_decoration_theme.dart';
 import 'package:amanh_news_app/core/styles/themes/theme_app.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 abstract class Decorations {
@@ -10,7 +10,6 @@ abstract class Decorations {
 
   static BoxDecoration newsCategoryDecoration({required String image}) {
     return BoxDecoration(
-      color: Colors.blue,
       borderRadius: BorderRadius.circular(16.0),
       image: DecorationImage(
         fit: BoxFit.cover,
@@ -19,29 +18,33 @@ abstract class Decorations {
     );
   }
 
-  static BoxDecoration imageInNewsItemBuilderBoxDecoration(context,
-      {required String image, bool isNetWorkImage = true}) {
+  static BoxDecoration newsItemBuilderBoxDecorations(BuildContext context) {
     return BoxDecoration(
-      color: Color(0xFF420504),
+      // color: AppColor.white,
+      color: ThemeApp.backgroundNewsItemColorThemeApp(context),
+      border: Border.all(
+        color: ThemeApp.borderNewsItemColorThemeApp(context),
+        width: 1.0,
+      ),
+      borderRadius: BorderRadius.circular(16.0),
+    );
+  }
+
+  static BoxDecoration imageInNewsItemBuilderBoxDecoration(
+    context,
+  ) {
+    return BoxDecoration(
+      color: AppColor.redDeep4,
       border: BorderDirectional(
           bottom: BorderSide(
         color: ThemeApp.borderNewsItemColorThemeApp(context),
         width: 1.5,
       )),
       borderRadius: BorderRadius.circular(15.0),
-      image: isNetWorkImage
-          ? DecorationImage(
-              fit: BoxFit.cover,
-              image: CachedNetworkImageProvider(image),
-            )
-          : DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage(AssetsImages.logo),
-            ),
     );
   }
 
-  static InputDecoration InputFormFieldDecoration(context) {
+  static InputDecoration inputFormFieldDecoration(context) {
     return InputDecoration(
         contentPadding: EdgeInsetsDirectional.symmetric(
             horizontal: 8,

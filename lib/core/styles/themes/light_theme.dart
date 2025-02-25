@@ -11,6 +11,7 @@ ThemeData lightTheme(context) {
     dividerColor: AppColor.black26,
     indicatorColor: AppColor.red,
     disabledColor: AppColor.black26,
+    cardColor: AppColor.redDeep3,
     textTheme: TextTheme(
       titleLarge: TextStyles.categoryTextStyle,
       titleMedium: TextStyles.titleTextStyle,
@@ -50,6 +51,10 @@ ThemeData lightTheme(context) {
       selectedIconTheme: IconThemeData(
         color: AppColor.white,
       ),
+    ),
+    progressIndicatorTheme: ProgressIndicatorThemeData(
+      circularTrackColor: AppColor.redDeep,
+      color: AppColor.white90,
     ),
   );
 }
