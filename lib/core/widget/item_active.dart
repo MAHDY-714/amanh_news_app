@@ -20,12 +20,14 @@ class ItemIsActive extends StatelessWidget {
   Widget build(BuildContext context) {
     return isActive
         ? AvatarGlow(
-            animate: true,
+            animate: isActive ? true : false,
             duration: Duration(seconds: 1),
             curve: Curves.linear,
             glowCount: 2,
             // glowColor: mode ? AppColor.red : Color(0xFFFF5C59),
-            glowColor: NavBarThemeApp.selectItemColorNavBarTheme(context),
+            glowColor: isActive
+                ? NavBarThemeApp.selectItemColorNavBarTheme(context)
+                : Colors.transparent,
             glowRadiusFactor: glowRadiusFactor ?? 1.0,
             child: CircleAvatar(
               radius: radius ?? 5.0,

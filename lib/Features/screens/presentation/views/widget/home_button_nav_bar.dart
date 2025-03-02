@@ -1,7 +1,6 @@
 import 'dart:developer';
 
-import 'package:amanh_news_app/Features/screens/presentation/manager/cubit/home_cubit.dart';
-import 'package:amanh_news_app/core/utils/constance.dart';
+import 'package:amanh_news_app/Features/screens/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:amanh_news_app/core/widget/item_active.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
@@ -32,8 +31,8 @@ class HomeButtonInNavBar extends StatelessWidget {
         child: FloatingActionButton.large(
           onPressed: () {
             cubi.currentCategory = 6;
-            log('the home button is active');
-            cubi.getHomeData(category: kNewsCategoriesName[6]);
+            log('the home button is active ${cubi.currentCategory}');
+            cubi.getCategoryHome(cubi.currentCategory);
           },
           elevation: 0.0,
           splashColor: AppColor.pink,

@@ -1,4 +1,4 @@
-import 'package:amanh_news_app/Features/screens/presentation/manager/cubit/home_cubit.dart';
+import 'package:amanh_news_app/Features/screens/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/news_categories_item_view.dart';
 import 'package:amanh_news_app/core/styles/assets/assets_images.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';

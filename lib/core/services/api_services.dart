@@ -12,7 +12,7 @@ class ApiServices {
 
   Future<Map<String, dynamic>> getNews({required String category}) async {
     var response = await dio.get(
-      '$basicUrl?$country&&apiKey=${ApiKey.apiKey}&category=$category',
+      '$basicUrl?$country&&apiKey=${ApiKey.apiKey2}&category=$category',
       // options: Options(
       //   headers: {
       //     'Content-Type': 'application/json',

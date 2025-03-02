@@ -8,7 +8,9 @@ abstract class NavBarThemeApp extends ThemeApp {
       Theme.of(context).bottomNavigationBarTheme.backgroundColor;
   static selectItemColorNavBarTheme(context) =>
       Theme.of(context).bottomNavigationBarTheme.selectedItemColor;
-  static borderColorNavBarTheme(context) =>
+  static borderColorNavBarDarkTheme(context) =>
+      Theme.of(context).bottomNavigationBarTheme.unselectedItemColor;
+  static borderColorNavBarLightTheme(context) =>
       Theme.of(context).bottomNavigationBarTheme.unselectedItemColor;
   static iconColorNavBarTheme(context) =>
       Theme.of(context).bottomNavigationBarTheme.selectedIconTheme!.color!;

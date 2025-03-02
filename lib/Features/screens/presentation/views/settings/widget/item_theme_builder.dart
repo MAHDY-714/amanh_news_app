@@ -10,32 +10,37 @@ class ItemChoseThemeView extends StatelessWidget {
       {super.key,
       required this.homeImage,
       required this.searchImage,
-      required this.mode});
+      required this.mode,
+      this.onTap});
   final String homeImage;
   final String searchImage;
   final bool mode;
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // height: kHeight(context) * .38,
-      width: kWidth(context),
-      padding: EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
-        color: AppColor.transparent,
-        borderRadius: BorderRadius.circular(16.0),
-        border: Border.all(
-            color: ThemeApp.borderItemSelectThemeColorThemeApp(context,
-                isActive: mode),
-            width: mode ? 2.5 : 1.5),
-      ),
-      child: Row(
-        children: [
-          ImageInItemTheme(image: homeImage, mode: mode),
-          const SizedBox(width: 8.0),
-          ImageInItemTheme(image: searchImage, mode: mode),
-          const SizedBox(width: 8.0),
-          IconActiveInItemTheme(mode: mode),
-        ],
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        // height: kHeight(context) * .38,
+        width: kWidth(context),
+        padding: EdgeInsets.all(8.0),
+        decoration: BoxDecoration(
+          color: AppColor.transparent,
+          borderRadius: BorderRadius.circular(16.0),
+          border: Border.all(
+              color: ThemeApp.borderItemSelectThemeColorThemeApp(context,
+                  isActive: mode),
+              width: mode ? 2.5 : 1.5),
+        ),
+        child: Row(
+          children: [
+            ImageInItemTheme(image: homeImage, mode: mode),
+            const SizedBox(width: 8.0),
+            ImageInItemTheme(image: searchImage, mode: mode),
+            const SizedBox(width: 8.0),
+            IconActiveInItemTheme(mode: mode),
+          ],
+        ),
       ),
     );
   }

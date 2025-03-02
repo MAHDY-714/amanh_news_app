@@ -1,3 +1,4 @@
+import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/widget/item_active.dart';
 import 'package:amanh_news_app/core/styles/decorations.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
@@ -27,7 +28,7 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
           valueIsFalse: kWidth(context) * .35,
         ),
         decoration: BoxDecoration(
-          color: Colors.transparent,
+          color: AppColor.transparent,
           borderRadius: BorderRadius.circular(16.0),
         ),
         child: Column(

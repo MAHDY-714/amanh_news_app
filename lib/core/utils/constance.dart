@@ -1,3 +1,5 @@
+import 'package:amanh_news_app/core/utils/cache_helper.dart';
+
 const kNewsDescription =
     "At GE Appliances, we bring good things to life, by designing and building the world's best appliances. Our goal is to help people improve their lives at home by providing quality appliances that were made for real life. Whether it's enjoying the tradition of making meals from scratch or tackling a mountain of muddy jeans and soccer jerseys, GE Appliances are crafted to support any and every task in the home.";
 const kNewsTitle =
@@ -17,4 +19,4 @@ const kNewsCategoriesName = [
   'World',
 ];
 
-bool kMode = false;
+bool kMode = CacheHelper.getData(key: 'isMode') ?? false; // false by default

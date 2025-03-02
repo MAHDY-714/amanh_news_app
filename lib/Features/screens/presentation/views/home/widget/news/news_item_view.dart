@@ -1,5 +1,4 @@
 import 'package:amanh_news_app/Features/screens/data/model/articles_news_model/articles_news_model.dart';
-import 'package:amanh_news_app/Features/screens/data/model/news_model/article_news_model.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/news/news_image_in_item_view.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/news/news_title_and_date_in_item_view.dart';
 import 'package:amanh_news_app/core/styles/decorations.dart';

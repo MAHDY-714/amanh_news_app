@@ -4,14 +4,13 @@ import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:flutter/material.dart';
 
 abstract class ThemeApp {
+  ThemeApp_();
   static ThemeData lightThemeMode(context) => lightTheme(context);
 
   static ThemeData darkThemeMode(context) => darkTheme(context);
 
-  static ThemeMode getThemeMode({required bool isDark}) {
-    kMode = isDark;
-    return isDark ? ThemeMode.dark : ThemeMode.light;
-  }
+  static ThemeMode getThemeMode(context) =>
+      kMode ? ThemeMode.dark : ThemeMode.light;
 
   static noBodyIconColorThemeApp(context) => Theme.of(context).primaryColor;
   static backgroundNewsItemColorThemeApp(context) =>
@@ -24,4 +23,5 @@ abstract class ThemeApp {
       isActive
           ? Theme.of(context).indicatorColor
           : Theme.of(context).disabledColor;
+  
 }

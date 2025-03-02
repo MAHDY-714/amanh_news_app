@@ -1,6 +1,7 @@
 abstract class ApiKey {
   ApiKey._();
   static const apiKey = 'pub_7176642dc43622a78e1d091f7dd18ad09ed68';
+  static const apiKey2 = 'pub_7176530eedc45b7639c11c04cbd87174a3fb3';
 
   /*
   

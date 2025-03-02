@@ -1,5 +1,4 @@
 import 'package:amanh_news_app/Features/screens/data/model/articles_news_model/articles_news_model.dart';
-import 'package:amanh_news_app/Features/screens/data/model/news_model/article_news_model.dart';
 import 'package:amanh_news_app/Features/screens/data/repo/home_repo.dart';
 import 'package:amanh_news_app/core/services/api_services.dart';
 import 'package:amanh_news_app/core/services/errors/failures.dart';

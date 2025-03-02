@@ -34,7 +34,7 @@ ThemeData darkTheme(context) {
         color: AppColor.redDeep3,
       ),
     ),
-    inputDecorationTheme: InputDecorationTheme(
+    inputDecorationTheme:  InputDecorationTheme(
       hintStyle: TextStyles.hintTextStyle.copyWith(
         color: AppColor.white38,
       ),
@@ -56,17 +56,17 @@ ThemeData darkTheme(context) {
       fillColor: AppColor.black26,
       filled: true,
     ),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: AppColor.white80,
       foregroundColor: AppColor.redDeep,
       hoverColor: AppColor.redDeep4,
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColor.redDeep7,
         selectedItemColor: AppColor.red,
         unselectedItemColor: AppColor.redDeep10,
-        selectedIconTheme: IconThemeData(color: AppColor.white54)),
-    progressIndicatorTheme: ProgressIndicatorThemeData(
+        selectedIconTheme: const IconThemeData(color: AppColor.white54)),
+    progressIndicatorTheme:const ProgressIndicatorThemeData(
       circularTrackColor: AppColor.redDeep8,
       color: AppColor.redDeep10,
     ),

@@ -19,7 +19,6 @@ class NoBodyView extends StatelessWidget {
         children: [
           Image.asset(
             AssetsImages.noBody,
-            // color: Colors.white70,
             color: ThemeApp.noBodyIconColorThemeApp(context),
             height: kHeightConditions(context,
                 valueIsTrue: 210.0, valueIsFalse: 250.0),

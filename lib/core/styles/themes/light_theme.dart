@@ -12,7 +12,7 @@ ThemeData lightTheme(context) {
     indicatorColor: AppColor.red,
     disabledColor: AppColor.black26,
     cardColor: AppColor.redDeep3,
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       titleLarge: TextStyles.categoryTextStyle,
       titleMedium: TextStyles.titleTextStyle,
       titleSmall: TextStyles.dateTextStyle,
@@ -39,22 +39,23 @@ ThemeData lightTheme(context) {
       fillColor: AppColor.white90,
       filled: true,
     ),
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
+    floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: AppColor.white90,
       foregroundColor: AppColor.red2,
       hoverColor: AppColor.redDeep2,
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: AppColor.redDeep6,
       selectedItemColor: AppColor.pink2,
       unselectedItemColor: AppColor.redDeep,
-      selectedIconTheme: IconThemeData(
+      selectedIconTheme: const IconThemeData(
         color: AppColor.white,
       ),
     ),
-    progressIndicatorTheme: ProgressIndicatorThemeData(
+    progressIndicatorTheme: const ProgressIndicatorThemeData(
       circularTrackColor: AppColor.redDeep,
       color: AppColor.white90,
     ),
   );
 }
+
