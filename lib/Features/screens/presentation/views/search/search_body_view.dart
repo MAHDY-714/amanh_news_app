@@ -8,15 +8,15 @@ class SearchBodyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BodyColor(
+    return const BodyColor(
       child: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              const SearchTextField(),
-              const NoBodyView(),
+              SearchTextField(),
+              NoBodyView(),
             ],
           ),
         ),

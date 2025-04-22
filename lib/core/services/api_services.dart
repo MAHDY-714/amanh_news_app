@@ -3,12 +3,12 @@ import 'package:dio/dio.dart';
 
 class ApiServices {
   static const basicUrl = 'https://newsdata.io/api/1/latest';
-  static const country = 'country=us';
-  static const language = 'language=ar';
+  static const country = 'country=jo';
+  static const language = 'language=en';
   // static const category = 'category=business';
   final Dio dio;
 
-  ApiServices({required this.dio});
+ApiServices({required this.dio});
 
   Future<Map<String, dynamic>> getNews({required String category}) async {
     var response = await dio.get(

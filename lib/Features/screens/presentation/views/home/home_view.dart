@@ -12,6 +12,6 @@ class HomeView extends StatelessWidget {
         data: kMode
             ? ThemeApp.darkThemeMode(context)
             : ThemeApp.lightThemeMode(context),
-        child: HomeBodyView());
+        child: const HomeBodyView());
   }
 }

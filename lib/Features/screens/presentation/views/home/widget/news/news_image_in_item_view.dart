@@ -22,7 +22,7 @@ class NewsImageInItemBuilder extends StatelessWidget {
           fit: BoxFit.cover,
           imageUrl: articlesNewsModel.imageUrl ?? '',
           errorWidget: (context, url, error) => Image.asset(AssetsImages.logo),
-          placeholder: (context, url) => CircleIndicatorLoadingWidget(
+          placeholder: (context, url) => const CircleIndicatorLoadingWidget(
             strokeWidth: 11,
             radiusOut: 12,
             radiusIn: 11,

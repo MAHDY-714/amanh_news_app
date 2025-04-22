@@ -5,8 +5,8 @@ import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/styles/themes/theme_app.dart';
 import 'package:flutter/material.dart';
 
-class ItemChoseThemeView extends StatelessWidget {
-  const ItemChoseThemeView(
+class ItemChoseThemeBuilder extends StatelessWidget {
+  const ItemChoseThemeBuilder(
       {super.key,
       required this.homeImage,
       required this.searchImage,
@@ -23,7 +23,7 @@ class ItemChoseThemeView extends StatelessWidget {
       child: Container(
         // height: kHeight(context) * .38,
         width: kWidth(context),
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           color: AppColor.transparent,
           borderRadius: BorderRadius.circular(16.0),

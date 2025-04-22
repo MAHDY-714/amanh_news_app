@@ -10,8 +10,8 @@ class SettingsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => SettingsCubit(),
-      child: Scaffold(
-        body: const SettingsBodyView(),
+      child: const Scaffold(
+        body: SettingsBodyView(),
       ),
     );
   }

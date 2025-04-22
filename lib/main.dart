@@ -19,7 +19,7 @@ void main() async {
   await CacheHelper.init();
 
   log('is Mode in Main $kMode');
-  runApp(AMANHNews());
+  runApp(const AMANHNews());
 }
 
 class AMANHNews extends StatelessWidget {

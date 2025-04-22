@@ -15,7 +15,7 @@ class NewsTitleAndDateInItemBuilder extends StatelessWidget {
       flex: 3,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        decoration: BoxDecoration(),
+        decoration: const BoxDecoration(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

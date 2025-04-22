@@ -8,7 +8,7 @@ class NavBarBodyView extends StatelessWidget {
   const NavBarBodyView({super.key});
   @override
   Widget build(BuildContext context) {
-    return BodyColor(
+    return const BodyColor(
       child: Scaffold(
         body: SafeArea(
           child: HomeView(),

@@ -24,14 +24,14 @@ ThemeData lightTheme(context) {
       suffixIconColor: AppColor.black26,
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide(
+        borderSide: const BorderSide(
           color: AppColor.black26,
           width: 1.5,
         ),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide(
+        borderSide: const BorderSide(
           color: AppColor.redDeep,
           width: 2.5,
         ),

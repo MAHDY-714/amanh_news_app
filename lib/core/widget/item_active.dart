@@ -21,6 +21,7 @@ class ItemIsActive extends StatelessWidget {
     return isActive
         ? AvatarGlow(
             animate: isActive ? true : false,
+            // ignore: prefer_const_constructors
             duration: Duration(seconds: 1),
             curve: Curves.linear,
             glowCount: 2,

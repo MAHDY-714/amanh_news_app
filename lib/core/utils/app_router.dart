@@ -13,19 +13,19 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: kNavBarView,
-        builder: (context, state) => NavBarView(),
+        builder: (context, state) => const NavBarView(),
       ),
       GoRoute(
         path: kHomeView,
-        builder: (context, state) => HomeView(),
+        builder: (context, state) => const HomeView(),
       ),
       GoRoute(
         path: kSearchView,
-        builder: (context, state) => SearchView(),
+        builder: (context, state) => const SearchView(),
       ),
       GoRoute(
         path: kSettingsView,
-        builder: (context, state) => SettingsView(),
+        builder: (context, state) => const SettingsView(),
       ),
     ],
   );

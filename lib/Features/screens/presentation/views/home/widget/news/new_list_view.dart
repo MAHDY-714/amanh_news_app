@@ -19,7 +19,7 @@ class NewsListView extends StatelessWidget {
           },
           itemCount: articlesNewsModel!.length,
           scrollDirection: Axis.vertical,
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           shrinkWrap: true,
         ),
       ),

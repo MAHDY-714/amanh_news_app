@@ -6,9 +6,9 @@ const kNewsTitle =
     'Amanh News: Your trusted source for breaking and reliable news. Stay up to date with the latest developments, delivered directly to your fingertips.';
 
 const kNewsTitle2 =
-    "College football notional championship score, Ohio State holds off Notre Dame to win title, 34-23 - Yahoo Sports";
+    'College football notional championship score, Ohio State holds off Notre Dame to win title, 34-23 - Yahoo Sports';
 
-const kNewsDate = "Friday, February 7, 2025";
+const kNewsDate = 'Friday, February 7, 2025';
 const kNewsCategoriesName = [
   'Technology',
   'Business',
@@ -20,3 +20,65 @@ const kNewsCategoriesName = [
 ];
 
 bool kMode = CacheHelper.getData(key: 'isMode') ?? false; // false by default
+const kCountriesCode = <String>[
+  'eg',
+  'jo',
+  'lb',
+  'ly',
+  'ma',
+  'ps',
+  'sa',
+  'sy',
+  'tn',
+  'ae',
+  'au',
+  'ca',
+  'gb',
+  'us',
+  'br',
+  'cf',
+  'fr',
+  'de',
+  'se',
+  'cn',
+  'gr',
+  'in',
+  'jp',
+  'kr',
+  'kp',
+  'ru',
+  'ua',
+  'fi',
+];
+
+ /*
+ 'eg',
+'jo',
+'lb',
+'ly',
+'ma',
+'ps',
+'sa',
+'sy',
+'tn',
+'ae',
+'au',
+'ca',
+'gb',
+'us',
+'br',
+'cf',
+'fr',
+'de',
+'se',
+'cn',
+'gr',
+'in',
+'jp',
+'kr',
+'kp',
+'ru',
+'ua',
+'fi',
+
+  */

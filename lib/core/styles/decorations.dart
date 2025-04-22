@@ -58,14 +58,14 @@ abstract class Decorations {
         fillColor: InputDecorationThemeApp.formFieldColorTheme(context),
         hintText: 'Search for the news you care about',
         hintStyle: InputDecorationThemeApp.themeHintStyle(context),
-        hintFadeDuration: Duration(seconds: 1),
+        hintFadeDuration: const Duration(seconds: 1),
         suffixIcon: IconButton(
             onPressed: () {},
             icon: Image(
                 height: 25,
                 width: 25,
                 color: InputDecorationThemeApp.suffixIconColorTheme(context),
-                image: AssetImage(
+                image: const AssetImage(
                   AssetsImages.searchIcon,
                 ))));
   }

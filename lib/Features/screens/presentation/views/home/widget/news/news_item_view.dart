@@ -32,10 +32,10 @@ class NewsItemBuilder extends StatelessWidget {
             NewsImageInItemBuilder(
               articlesNewsModel: articlesNewsModel,
             ),
-            SizedBox(height: 4.0),
+            const SizedBox(height: 4.0),
             NewsTitleAndDateInItemBuilder(
                 title: articlesNewsModel.title ?? '', date: '$date'),
-            SizedBox(height: 4.0),
+            const SizedBox(height: 4.0),
           ],
         ),
       ),

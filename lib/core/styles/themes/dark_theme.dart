@@ -41,14 +41,14 @@ ThemeData darkTheme(context) {
       suffixIconColor: AppColor.white70,
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide(
+        borderSide: const BorderSide(
           color: AppColor.white38,
           width: 1.5,
         ),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide(
+        borderSide: const BorderSide(
           color: AppColor.white90,
           width: 2.0,
         ),

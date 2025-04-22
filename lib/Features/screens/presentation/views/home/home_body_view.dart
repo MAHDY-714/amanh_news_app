@@ -23,7 +23,7 @@ class HomeBodyView extends StatelessWidget {
           padding: const EdgeInsets.all(4.0),
           child: Column(
             children: [
-              NewsCategoriesListView(),
+              const NewsCategoriesListView(),
               ConditionalBuilder(
                 condition: state is! HomeLoadingState,
                 builder: (
