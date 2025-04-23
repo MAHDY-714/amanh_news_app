@@ -1,6 +1,5 @@
 import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/pop_menu/item_in_pop_menu_item_view.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
-import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +12,11 @@ class PopMenuItemBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const spacer = Spacer();
     return Container(
-      width: kWidth(context) * .24,
-      padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+      height: 35.0,
+      width: 100.0,
+      padding: const EdgeInsets.symmetric(horizontal: 4.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.0),
         color: kMode ? AppColor.redDeep7 : AppColor.redDeep2,
@@ -32,11 +33,11 @@ class PopMenuItemBuilder extends StatelessWidget {
             countryCode: kCountriesCode[index],
             isActive: false,
           ),
-          const Spacer(),
+          spacer,
           const Icon(
             Icons.arrow_drop_down,
             size: 25.0,
-            color: Colors.white,
+            color: Colors.white70,
           ),
         ],
       ),

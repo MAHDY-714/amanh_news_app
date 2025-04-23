@@ -1,6 +1,6 @@
+import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/country_flag_icon.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/assets/assets_font_family.dart';
-import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
 
 class ItemInPopMenuItemBuilder extends StatelessWidget {
@@ -15,10 +15,9 @@ class ItemInPopMenuItemBuilder extends StatelessWidget {
   final bool isActive;
   @override
   Widget build(BuildContext context) {
-    final colorFlag = isActive ? AppColor.white24 : AppColor.white24;
     const textStyle = const TextStyle(
-      fontSize: 11.0,
-      color: AppColor.white,
+      fontSize: 12.0,
+      color: AppColor.white70,
       fontFamily: AssetsFontFamily.platypi400,
       letterSpacing: 1.0,
     );
@@ -31,23 +30,7 @@ class ItemInPopMenuItemBuilder extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Container(
-            width: itemSize,
-            height: itemSize,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: colorFlag,
-                width: 1.0,
-              ),
-            ),
-            child: CountryFlag.fromCountryCode(
-              countryCode,
-              width: itemSize,
-              height: itemSize,
-              shape: const Circle(),
-            ),
-          ),
+          CountryFlagIcon(countryCode: countryCode),
           const SizedBox(width: 8.0),
           Text(
             countryCode.toUpperCase(),

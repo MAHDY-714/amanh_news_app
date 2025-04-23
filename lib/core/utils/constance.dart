@@ -21,6 +21,7 @@ const kNewsCategoriesName = [
 
 bool kMode = CacheHelper.getData(key: 'isMode') ?? false; // false by default
 const kCountriesCode = <String>[
+  'wo',
   'eg',
   'jo',
   'lb',
@@ -50,7 +51,19 @@ const kCountriesCode = <String>[
   'ua',
   'fi',
 ];
+String kCountryFlag({required String countryFlagEmoji}) {
+  int flagOffset = 0x1F1E6;
+  int asciiOffset = 0x41;
 
+  String country = countryFlagEmoji; // Example country code
+
+  int firstChar = country.codeUnitAt(0) - asciiOffset + flagOffset;
+  int secondChar = country.codeUnitAt(1) - asciiOffset + flagOffset;
+
+  String flag =
+      String.fromCharCode(firstChar) + String.fromCharCode(secondChar);
+  return flag;
+}
  /*
  'eg',
 'jo',

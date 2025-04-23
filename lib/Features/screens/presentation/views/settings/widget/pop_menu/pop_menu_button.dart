@@ -17,6 +17,12 @@ class PopMenuButton extends StatelessWidget {
     final color = kMode ? AppColor.redDeep7 : AppColor.redDeep2;
     return PopupMenuButton(
       // position: PopupMenuPosition.under,
+      popUpAnimationStyle: AnimationStyle(
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.decelerate,
+        reverseDuration: const Duration(milliseconds: 500),
+        reverseCurve: Curves.decelerate,
+      ),
       color: color,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8.0),
@@ -24,12 +30,13 @@ class PopMenuButton extends StatelessWidget {
       ),
       offset: Offset(widthPosition, heightPosition),
       padding: const EdgeInsets.all(0.0),
+
       icon: const PopMenuItemBuilder(
-        index: 5,
+        index: 0,
       ),
       constraints: BoxConstraints(
-        maxHeight: kHeight(context) * .17,
-        maxWidth: kWidth(context) * .24,
+        maxHeight: kHeight(context) * .13,
+        maxWidth: 100.0,
       ),
       itemBuilder: (context) {
         return List.generate(
