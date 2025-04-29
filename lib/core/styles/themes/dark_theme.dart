@@ -14,9 +14,27 @@ ThemeData darkTheme(context) {
     primaryColor: AppColor.white38,
     hoverColor: AppColor.redDeep6,
     dividerColor: AppColor.white24,
-    indicatorColor: AppColor.redDeep3,
-    disabledColor: AppColor.white12,
+    indicatorColor: AppColor.redDeep4,
+    disabledColor: AppColor.white38,
     cardColor: AppColor.redDeep5,
+    // colorScheme: ColorScheme(
+    //   accentColor: AppColor.white12, //border color
+    //   cardColor: AppColor.black12, //item Select color
+    //   backgroundColor: AppColor.redDeep4, //row Language color
+    //   errorColor: AppColor.black38,  // button Language color
+    // ),
+
+    colorScheme: const ColorScheme(
+      brightness: Brightness.dark,
+      primary: AppColor.white12, // border color
+      onPrimary: AppColor.black12, // item Select color
+      secondary: AppColor.redDeep4, //  row Language color
+      onSecondary: AppColor.black38, // button Language color
+      error: AppColor.white12,
+      onError: AppColor.white12,
+      surface: AppColor.white12,
+      onSurface: AppColor.white12,
+    ),
     textTheme: TextTheme(
       titleLarge: TextStyles.categoryTextStyle.copyWith(
         color: AppColor.white70,
@@ -27,6 +45,9 @@ ThemeData darkTheme(context) {
       titleSmall: TextStyles.dateTextStyle.copyWith(
         color: AppColor.white38,
       ),
+      displayLarge: TextStyles.settingsTextStyle.copyWith(
+        color: AppColor.white80,
+      ),
       displayMedium: TextStyles.formFieldTextStyle.copyWith(
         color: AppColor.white70,
       ),
@@ -34,7 +55,7 @@ ThemeData darkTheme(context) {
         color: AppColor.redDeep3,
       ),
     ),
-    inputDecorationTheme:  InputDecorationTheme(
+    inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyles.hintTextStyle.copyWith(
         color: AppColor.white38,
       ),
@@ -64,11 +85,11 @@ ThemeData darkTheme(context) {
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColor.redDeep7,
         selectedItemColor: AppColor.red,
-        unselectedItemColor: AppColor.redDeep10,
+        unselectedItemColor: AppColor.redDeep11,
         selectedIconTheme: const IconThemeData(color: AppColor.white54)),
-    progressIndicatorTheme:const ProgressIndicatorThemeData(
+    progressIndicatorTheme: const ProgressIndicatorThemeData(
       circularTrackColor: AppColor.redDeep8,
-      color: AppColor.redDeep10,
+      color: AppColor.redDeep11,
     ),
   );
 }

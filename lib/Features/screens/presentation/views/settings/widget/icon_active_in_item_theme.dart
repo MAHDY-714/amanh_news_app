@@ -24,7 +24,7 @@ class IconActiveInItemTheme extends StatelessWidget {
               isActive: mode),
           child: CircleAvatar(
             radius: 7.5,
-            backgroundColor: kMode ? AppColor.redDeep5 : AppColor.white,
+            backgroundColor: kMode ? AppColor.redDeep6 : AppColor.white,
           ),
         ),
       ),

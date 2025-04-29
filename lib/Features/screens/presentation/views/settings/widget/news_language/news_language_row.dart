@@ -1,6 +1,6 @@
 import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/news_language/news_language_button.dart';
-import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
+import 'package:amanh_news_app/core/styles/themes/theme_app.dart';
 import 'package:flutter/material.dart';
 
 class NewsLanguageRow extends StatelessWidget {
@@ -11,45 +11,37 @@ class NewsLanguageRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const heightBody = 35.0;
-    return SizedBox(
+    const space = SizedBox(width: 8.0);
+    final itemSelectedColorTheme =
+        ThemeApp.itemSelectedLanguageThemeApp(context);
+    return Container(
       height: heightBody,
+      decoration: BoxDecoration(
+        // color: AppColor.redDeep6, // light mode
+        // color: backgroundColorTheme, // dark mode
+        // color: AppColor.transparent,
+        borderRadius: BorderRadius.circular(8.0),
+      ),
       width: kWidth(context),
-      child: const Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Flexible(
-            flex: 1,
-            child: NewsLanguageButton(
-              heightBody: heightBody,
-              countryCode: 'EG',
-              countryLanguage: 'Arabic',
-              topEndRadius: 0.0,
-              bottomEndRadius: 0.0,
-            ),
+          const NewsLanguageButton(
+            heightBody: heightBody,
+            countryCode: 'EG',
+            countryLanguage: 'AR',
           ),
-          Flexible(
-            flex: 1,
-            child: NewsLanguageButton(
-              heightBody: heightBody,
-              countryCode: 'US',
-              countryLanguage: 'English',
-              color: AppColor.redDeep4,
-              fontColor: AppColor.white80,
-              topStartRadius: 0.0,
-              bottomStartRadius: 0.0,
-              topEndRadius: 0.0,
-              bottomEndRadius: 0.0,
-            ),
+          space,
+          NewsLanguageButton(
+            heightBody: heightBody,
+            countryCode: 'US',
+            countryLanguage: 'EN',
+            color: itemSelectedColorTheme,
           ),
-          Flexible(
-            fit: FlexFit.tight,
-            flex: 2,
-            child: NewsLanguageButton(
-              heightBody: heightBody,
-              countryCode: 'WO',
-              topStartRadius: 0.0,
-              bottomStartRadius: 0.0,
-            ),
+          space,
+          const NewsLanguageButton(
+            heightBody: heightBody,
+            countryCode: 'WO',
           ),
         ],
       ),

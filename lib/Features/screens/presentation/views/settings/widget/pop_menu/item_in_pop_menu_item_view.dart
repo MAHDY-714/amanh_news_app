@@ -17,8 +17,8 @@ class ItemInPopMenuItemBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     const textStyle = const TextStyle(
       fontSize: 12.0,
-      color: AppColor.white70,
-      fontFamily: AssetsFontFamily.platypi400,
+      color: AppColor.white,
+      fontFamily: AssetsFontFamily.bitter900,
       letterSpacing: 1.0,
     );
     return Container(
@@ -35,6 +35,7 @@ class ItemInPopMenuItemBuilder extends StatelessWidget {
           Text(
             countryCode.toUpperCase(),
             style: textStyle,
+        
           ),
         ],
       ),

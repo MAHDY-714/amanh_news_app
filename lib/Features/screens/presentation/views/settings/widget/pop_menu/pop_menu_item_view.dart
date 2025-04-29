@@ -19,7 +19,7 @@ class PopMenuItemBuilder extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 4.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.0),
-        color: kMode ? AppColor.redDeep7 : AppColor.redDeep2,
+        color: kMode ? AppColor.redDeep7 : AppColor.red3,
         border: Border.all(
           color: kMode ? AppColor.white24 : AppColor.white24,
           width: 1.0,
@@ -37,7 +37,7 @@ class PopMenuItemBuilder extends StatelessWidget {
           const Icon(
             Icons.arrow_drop_down,
             size: 25.0,
-            color: Colors.white70,
+            color: AppColor.white,
           ),
         ],
       ),

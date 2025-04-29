@@ -23,5 +23,13 @@ abstract class ThemeApp {
       isActive
           ? Theme.of(context).indicatorColor
           : Theme.of(context).disabledColor;
-  
+
+  static itemSelectedLanguageThemeApp(context) =>
+      Theme.of(context).colorScheme.onPrimary;
+  static borderButtonsLanguageThemeApp(context) =>
+      Theme.of(context).colorScheme.primary;
+  static backgroundRowLanguageThemeApp(context) =>
+      Theme.of(context).colorScheme.secondary;
+  static buttonLanguageThemeApp(context) =>
+      Theme.of(context).colorScheme.onSecondary;
 }

@@ -14,7 +14,7 @@ class PopMenuButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final heightPosition = kHeight(context) * .055;
     final widthPosition = kWidth(context) * 0.0;
-    final color = kMode ? AppColor.redDeep7 : AppColor.redDeep2;
+    final color = kMode ? AppColor.redDeep7 : AppColor.red3;
     return PopupMenuButton(
       // position: PopupMenuPosition.under,
       popUpAnimationStyle: AnimationStyle(
@@ -35,7 +35,7 @@ class PopMenuButton extends StatelessWidget {
         index: 0,
       ),
       constraints: BoxConstraints(
-        maxHeight: kHeight(context) * .13,
+        maxHeight: kHeight(context) * .19,
         maxWidth: 100.0,
       ),
       itemBuilder: (context) {

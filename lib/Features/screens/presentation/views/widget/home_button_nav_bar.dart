@@ -35,7 +35,7 @@ class HomeButtonInNavBar extends StatelessWidget {
             cubi.getCategoryHome(cubi.currentCategory);
           },
           elevation: 0.0,
-          splashColor: AppColor.pink,
+          splashColor: AppColor.pink2,
           backgroundColor:
               FloatingActionButtonThemeApp.backgroundFloatingButtonThemeApp(
                   context),

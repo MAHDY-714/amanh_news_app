@@ -46,7 +46,12 @@ abstract class TextStyles {
     fontFamily: AssetsFontFamily.bitter900,
     fontSize: 17,
   );
-
+  static const settingsTextStyle = TextStyle(
+    fontSize: 13.0,
+    color: AppColor.red2,
+    fontFamily: AssetsFontFamily.bitter900,
+    letterSpacing: 1.0,
+  );
   static TextStyle categoryTextNameStyle(context, {required bool isActive}) {
     return TextStyle(
       fontFamily:

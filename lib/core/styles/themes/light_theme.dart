@@ -9,13 +9,25 @@ ThemeData lightTheme(context) {
     primaryColor: AppColor.redDeep,
     hoverColor: AppColor.white,
     dividerColor: AppColor.black26,
-    indicatorColor: AppColor.red,
-    disabledColor: AppColor.black26,
+    indicatorColor: AppColor.red3,
+    disabledColor: AppColor.black38,
     cardColor: AppColor.redDeep3,
+    colorScheme: const ColorScheme(
+      brightness: Brightness.dark,
+      primary: AppColor.redDeep, //  border color
+      onPrimary: AppColor.red2, // item Select color
+      secondary: AppColor.redDeep, //  background  row Language color
+      onSecondary: AppColor.pink, // button Language color
+      error: AppColor.white12,
+      onError: AppColor.white12,
+      surface: AppColor.white12,
+      onSurface: AppColor.white12,
+    ),
     textTheme: const TextTheme(
       titleLarge: TextStyles.categoryTextStyle,
       titleMedium: TextStyles.titleTextStyle,
       titleSmall: TextStyles.dateTextStyle,
+      displayLarge: TextStyles.settingsTextStyle,
       displayMedium: TextStyles.formFieldTextStyle,
       labelMedium: TextStyles.errorTextStyle,
     ),
@@ -46,7 +58,7 @@ ThemeData lightTheme(context) {
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: AppColor.redDeep6,
-      selectedItemColor: AppColor.pink2,
+      selectedItemColor: AppColor.pink3,
       unselectedItemColor: AppColor.redDeep,
       selectedIconTheme: const IconThemeData(
         color: AppColor.white,
@@ -58,4 +70,3 @@ ThemeData lightTheme(context) {
     ),
   );
 }
-

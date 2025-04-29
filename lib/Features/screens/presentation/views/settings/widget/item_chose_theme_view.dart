@@ -21,23 +21,32 @@ class ItemChoseThemeBuilder extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        // height: kHeight(context) * .38,
-        width: kWidth(context),
-        padding: const EdgeInsets.all(8.0),
+        height: kHeight(context) * .28,
+        // width: kWidth(context) * .34,
+        padding: const EdgeInsets.all(4.0),
         decoration: BoxDecoration(
           color: AppColor.transparent,
-          borderRadius: BorderRadius.circular(16.0),
+          borderRadius: BorderRadius.circular(12.0),
           border: Border.all(
               color: ThemeApp.borderItemSelectThemeColorThemeApp(context,
                   isActive: mode),
               width: mode ? 2.5 : 1.5),
         ),
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            ImageInItemTheme(image: homeImage, mode: mode),
-            const SizedBox(width: 8.0),
-            ImageInItemTheme(image: searchImage, mode: mode),
-            const SizedBox(width: 8.0),
+            Expanded(
+              flex: 4,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ImageInItemTheme(image: homeImage, mode: mode),
+                  const SizedBox(width: 4.0),
+                  ImageInItemTheme(image: searchImage, mode: mode),
+                ],
+              ),
+            ),
+            const SizedBox(height: 4.0),
             IconActiveInItemTheme(mode: mode),
           ],
         ),

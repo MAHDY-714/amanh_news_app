@@ -27,7 +27,7 @@ class NewsImageInItemBuilder extends StatelessWidget {
             radiusOut: 12,
             radiusIn: 11,
             progressIndicatorTrackColor: AppColor.redDeep8,
-            outlinedIndicatorColor: AppColor.redDeep10,
+            outlinedIndicatorColor: AppColor.redDeep11,
           ),
         ),
       ),

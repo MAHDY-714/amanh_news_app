@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 
 abstract class AppColor {
   AppColor._();
-  static const pink = Color(0xFFFFC5C5);
-  static const pink2 = Color(0xFFFF5C59);
+  static const pink = Color(0x46FFCACA);
+  static const pink2 = Color(0xFFFFC5C5);
+  static const pink3 = Color(0xFFFF5C59);
   static const red = Color(0xFFD00303);
   static const red2 = Color(0xFFAE0000);
+  static const red3 = Color(0xFF950000);
   static const redDeep = Color(0xFF750200);
   static const redDeep2 = Color(0xFF670000);
   static const redDeep3 = Color(0xFF590100);
@@ -14,9 +16,18 @@ abstract class AppColor {
   static const redDeep6 = Color(0xFF270000);
   static const redDeep7 = Color(0xFF230401);
   static const redDeep8 = Color(0xFF200503);
-  static const redDeep10 = Color(0x09FF1100);
+  static const redDeep10 = Color(0xFF1A0101);
+  static const redDeep11 = Color(0x09FF1100);
 
+  static const greenDeep = Color(0xA600FF77);
+  static const skyDeep = Color(0xA900CCFF);
+  static const orangeDeep = Color(0x9DFD4C00);
+
+  static const black12 = Colors.black12;
   static const black26 = Colors.black26;
+  static const black38 = Colors.black38;
+  static const black45 = Colors.black45;
+  static const black54 = Colors.black54;
   static const black87 = Colors.black87;
   static const black = Colors.black;
   static const white12 = Colors.white12;
@@ -28,6 +39,7 @@ abstract class AppColor {
   static const white90 = Color(0xFFE9E9E9);
   static const white = Colors.white;
   static const transparent = Colors.transparent;
+
   static const bodyColor = [
     Color(0xFF190A05),
     Color(0xFF190A05),

@@ -48,7 +48,7 @@ class CircleIndicatorLoadingWidget extends StatelessWidget {
                   ProgressIndicatorThemeApp.progressIndicatorTrackColorTheme(
                       context),
               strokeCap: StrokeCap.butt,
-              valueColor: const AlwaysStoppedAnimation<Color>(AppColor.pink2),
+              valueColor: const AlwaysStoppedAnimation<Color>(AppColor.pink3),
               strokeAlign: 1,
             ),
           ),

@@ -1,79 +1,54 @@
 import 'package:amanh_news_app/Features/screens/presentation/manager/settings%20cubit/settings_cubit.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/item_chose_theme_view.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/news_language/news_language_row.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/pop_menu/pop_menu_button.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/row_for_chose_theme_builder.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/settings_item_view.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
-import 'package:amanh_news_app/core/styles/assets/assets_font_family.dart';
-import 'package:amanh_news_app/core/styles/assets/assets_images.dart';
-import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:amanh_news_app/core/widget/body_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingsBodyView extends StatelessWidget {
   const SettingsBodyView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const sizedBox = SizedBox(height: 4.0);
+    const sizedBoxHeight = SizedBox(height: 16.0);
+    // const sizedBoxWidth = SizedBox(width: 8.0);
     var cubi = BlocProvider.of<SettingsCubit>(context);
     return BlocBuilder<SettingsCubit, SettingsState>(
       builder: (context, state) {
         return BodyColor(
           child: SafeArea(
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+              padding: const EdgeInsets.all(8.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: ItemChoseThemeBuilder(
-                      homeImage: AssetsImages.homeDark,
-                      searchImage: AssetsImages.searchDark,
-                      mode: kMode ? true : false,
-                      onTap: () => cubi.changeThemeApp(isMode: true),
-                    ),
+                  const SettingsItemBuilder(
+                    title: 'Mode',
+                    icon: FontAwesomeIcons.volcano,
+                    color: AppColor.redDeep2,
                   ),
-                  sizedBox,
-                  Expanded(
-                    child: ItemChoseThemeBuilder(
-                      homeImage: AssetsImages.homeLight,
-                      searchImage: AssetsImages.searchLight,
-                      mode: kMode ? false : true,
-                      onTap: () => cubi.changeThemeApp(isMode: false),
-                    ),
+                  sizedBoxHeight,
+                  RowForChoseThemeBuilder(cubi: cubi),
+                  sizedBoxHeight,
+                  const SettingsItemBuilder(
+                    title: 'Country',
+                    icon: TablerIcons.world,
+                    color: AppColor.greenDeep,
                   ),
-                  sizedBox,
-                  const Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'News Language',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                            color: AppColor.white54,
-                            fontFamily: AssetsFontFamily.platypi400,
-                            letterSpacing: 1.0,
-                          ),
-                        ),
-                        sizedBox,
-                        const NewsLanguageRow(),
-                        sizedBox,
-                        Text(
-                          'News Country',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                            color: AppColor.white54,
-                            fontFamily: AssetsFontFamily.platypi400,
-                            letterSpacing: 1.0,
-                          ),
-                        ),
-                        sizedBox,
-                        PopMenuButton(),
-                      ],
-                    ),
+                  sizedBoxHeight,
+                  const SettingsItemBuilder(
+                    title: 'Language',
+                    icon: Icons.translate_rounded,
+                    color: AppColor.skyDeep,
+                  ),
+                  sizedBoxHeight,
+                  const SettingsItemBuilder(
+                    title: 'About',
+                    icon: TablerIcons.info_circle,
+                    color: AppColor.orangeDeep,
                   ),
                 ],
               ),
@@ -84,4 +59,3 @@ class SettingsBodyView extends StatelessWidget {
     );
   }
 }
-
