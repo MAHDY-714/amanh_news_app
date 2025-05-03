@@ -8,10 +8,6 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-        data: kMode
-            ? ThemeApp.darkThemeMode(context)
-            : ThemeApp.lightThemeMode(context),
-        child: const HomeBodyView());
+    return const HomeBodyView();
   }
 }

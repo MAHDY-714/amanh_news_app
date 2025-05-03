@@ -17,23 +17,18 @@ ThemeData darkTheme(context) {
     indicatorColor: AppColor.redDeep4,
     disabledColor: AppColor.white38,
     cardColor: AppColor.redDeep5,
-    // colorScheme: ColorScheme(
-    //   accentColor: AppColor.white12, //border color
-    //   cardColor: AppColor.black12, //item Select color
-    //   backgroundColor: AppColor.redDeep4, //row Language color
-    //   errorColor: AppColor.black38,  // button Language color
-    // ),
-
     colorScheme: const ColorScheme(
-      brightness: Brightness.dark,
-      primary: AppColor.white12, // border color
-      onPrimary: AppColor.black12, // item Select color
-      secondary: AppColor.redDeep4, //  row Language color
-      onSecondary: AppColor.black38, // button Language color
+      brightness: Brightness.light,
+      primary: AppColor.redDeep10, //    border Button Color In Settings Screen
+      onPrimary: AppColor.redDeep10, // shadow Button Color In Settings Screen
+      secondary:
+          AppColor.redDeep7, //  button Lower Layer Color In Settings Screen
+      onSecondary:
+          AppColor.black38, // button Upper Layer Color In Settings Screen
+      surface: AppColor.white70, // icon Color In Settings Screen
+      onSurface: AppColor.redDeep3, //  icon Mode Color In Settings Screen
       error: AppColor.white12,
       onError: AppColor.white12,
-      surface: AppColor.white12,
-      onSurface: AppColor.white12,
     ),
     textTheme: TextTheme(
       titleLarge: TextStyles.categoryTextStyle.copyWith(
@@ -45,8 +40,8 @@ ThemeData darkTheme(context) {
       titleSmall: TextStyles.dateTextStyle.copyWith(
         color: AppColor.white38,
       ),
-      displayLarge: TextStyles.settingsTextStyle.copyWith(
-        color: AppColor.white80,
+      displayLarge: TextStyles.settingsTitlesTextStyle.copyWith(
+        color: AppColor.white70,
       ),
       displayMedium: TextStyles.formFieldTextStyle.copyWith(
         color: AppColor.white70,

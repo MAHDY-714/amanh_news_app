@@ -12,8 +12,7 @@ class NewsLanguageRow extends StatelessWidget {
   Widget build(BuildContext context) {
     const heightBody = 35.0;
     const space = SizedBox(width: 8.0);
-    final itemSelectedColorTheme =
-        ThemeApp.itemSelectedLanguageThemeApp(context);
+    final itemSelectedColorTheme = ThemeApp.shadowButtonColorThemeApp(context);
     return Container(
       height: heightBody,
       decoration: BoxDecoration(

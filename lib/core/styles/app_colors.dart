@@ -19,9 +19,9 @@ abstract class AppColor {
   static const redDeep10 = Color(0xFF1A0101);
   static const redDeep11 = Color(0x09FF1100);
 
-  static const greenDeep = Color(0xA600FF77);
-  static const skyDeep = Color(0xA900CCFF);
-  static const orangeDeep = Color(0x9DFD4C00);
+  static const greenDeep = Color(0xA606B356);
+  static const skyDeep = Color(0xA9027C9B);
+  static const orangeDeep = Color(0x93B83700);
 
   static const black12 = Colors.black12;
   static const black26 = Colors.black26;

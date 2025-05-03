@@ -1,11 +1,18 @@
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 ThemeData lightTheme(context) {
   return ThemeData.light().copyWith(
     scaffoldBackgroundColor: AppColor.white,
-    brightness: Brightness.dark,
+    appBarTheme: const AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: AppColor.redDeep3,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    ),
+    applyElevationOverlayColor: true,
     primaryColor: AppColor.redDeep,
     hoverColor: AppColor.white,
     dividerColor: AppColor.black26,
@@ -13,21 +20,24 @@ ThemeData lightTheme(context) {
     disabledColor: AppColor.black38,
     cardColor: AppColor.redDeep3,
     colorScheme: const ColorScheme(
-      brightness: Brightness.dark,
-      primary: AppColor.redDeep, //  border color
-      onPrimary: AppColor.red2, // item Select color
-      secondary: AppColor.redDeep, //  background  row Language color
-      onSecondary: AppColor.pink, // button Language color
+      brightness: Brightness.light,
+
+      primary: AppColor.redDeep, //    border Button Color In Settings Screen
+      onPrimary: AppColor.black45, // shadow Button Color In Settings Screen
+      secondary:
+          Color(0x22FF0000), //  button Lower Layer Color In Settings Screen
+      onSecondary:
+          AppColor.white70, // button Upper Layer Color In Settings Screen
+      surface: AppColor.black54, // icon Color In Settings Screen
+      onSurface: AppColor.black54, //  icon Mode Color In Settings Screen
       error: AppColor.white12,
       onError: AppColor.white12,
-      surface: AppColor.white12,
-      onSurface: AppColor.white12,
     ),
     textTheme: const TextTheme(
       titleLarge: TextStyles.categoryTextStyle,
       titleMedium: TextStyles.titleTextStyle,
       titleSmall: TextStyles.dateTextStyle,
-      displayLarge: TextStyles.settingsTextStyle,
+      displayLarge: TextStyles.settingsTitlesTextStyle,
       displayMedium: TextStyles.formFieldTextStyle,
       labelMedium: TextStyles.errorTextStyle,
     ),

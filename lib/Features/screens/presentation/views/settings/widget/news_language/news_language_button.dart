@@ -32,7 +32,7 @@ class NewsLanguageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     const space = SizedBox(width: 4.0);
     final borderColorTheme = ThemeApp.borderButtonsLanguageThemeApp(context);
-    final buttonColorTheme = ThemeApp.buttonLanguageThemeApp(context);
+    final buttonColorTheme = ThemeApp.iconInSettingsColorThemeApp(context);
 
     final border = Border.all(
       // color: AppColor.redDeep2, // light mode

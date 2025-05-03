@@ -24,12 +24,16 @@ abstract class ThemeApp {
           ? Theme.of(context).indicatorColor
           : Theme.of(context).disabledColor;
 
-  static itemSelectedLanguageThemeApp(context) =>
+  static shadowButtonColorThemeApp(context) =>
       Theme.of(context).colorScheme.onPrimary;
   static borderButtonsLanguageThemeApp(context) =>
       Theme.of(context).colorScheme.primary;
-  static backgroundRowLanguageThemeApp(context) =>
+  static settingsButtonLowerLayerColorThemeApp(context) =>
       Theme.of(context).colorScheme.secondary;
-  static buttonLanguageThemeApp(context) =>
+  static settingsButtonUpperLayerColorThemeApp(context) =>
       Theme.of(context).colorScheme.onSecondary;
+  static iconInSettingsColorThemeApp(context) =>
+      Theme.of(context).colorScheme.surface;
+  static iconModeColorThemeApp(context) =>
+      Theme.of(context).colorScheme.onSurface;
 }

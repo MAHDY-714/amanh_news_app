@@ -46,9 +46,9 @@ abstract class TextStyles {
     fontFamily: AssetsFontFamily.bitter900,
     fontSize: 17,
   );
-  static const settingsTextStyle = TextStyle(
-    fontSize: 13.0,
-    color: AppColor.red2,
+  static const settingsTitlesTextStyle = TextStyle(
+    fontSize: 15.0,
+    color: AppColor.black54,
     fontFamily: AssetsFontFamily.bitter900,
     letterSpacing: 1.0,
   );
