@@ -1,4 +1,4 @@
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/country_flag_icon.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/body%20content/country_flag_icon.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/assets/assets_font_family.dart';
 import 'package:flutter/material.dart';

@@ -1,4 +1,4 @@
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/pop_menu/item_in_pop_menu_item_view.dart';
+import 'package:amanh_news_app/core/widget/pop_menu/item_in_pop_menu_item_view.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:flutter/material.dart';

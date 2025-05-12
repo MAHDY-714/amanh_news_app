@@ -32,8 +32,14 @@ abstract class TextThemeApp extends ThemeApp {
   static themeTitleTextInSettings(context) =>
       Theme.of(context).textTheme.displayLarge!.copyWith(
             fontSize: kWidthConditions(context,
-                valueIsTrue: 14.0, valueIsFalse: 12.0),
+                valueIsTrue: 20.0, valueIsFalse: 14.0),
           );
+  static themeCodeInSettings(context) =>
+      Theme.of(context).textTheme.labelLarge!.copyWith(
+            fontSize: kWidthConditions(context,
+                valueIsTrue: 18.0, valueIsFalse: 16.0),
+          );
+
   static themTextError(context) =>
       Theme.of(context).textTheme.labelMedium!.copyWith(
             fontSize: kWidthConditions(context,

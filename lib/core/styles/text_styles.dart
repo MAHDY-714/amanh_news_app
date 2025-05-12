@@ -47,7 +47,13 @@ abstract class TextStyles {
     fontSize: 17,
   );
   static const settingsTitlesTextStyle = TextStyle(
-    fontSize: 15.0,
+    fontSize: 16.0,
+    color: AppColor.black54,
+    fontFamily: AssetsFontFamily.bitter900,
+    letterSpacing: 1.0,
+  );
+  static const codeSettingsTextStyle = TextStyle(
+    fontSize: 18.0,
     color: AppColor.black54,
     fontFamily: AssetsFontFamily.bitter900,
     letterSpacing: 1.0,

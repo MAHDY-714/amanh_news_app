@@ -69,4 +69,38 @@ abstract class Decorations {
                   AssetsImages.searchIcon,
                 ))));
   }
+
+  static BoxDecoration settingsItemBuilderLowerLayerBoxDecorations(
+    context,
+  ) {
+    final shadowButtonColor = ThemeApp.shadowButtonColorThemeApp(context);
+    final borderButtonColor = ThemeApp.borderButtonsLanguageThemeApp(context);
+    final buttonLowerLayerColor =
+        ThemeApp.settingsButtonLowerLayerColorThemeApp(context);
+    return BoxDecoration(
+      color: buttonLowerLayerColor,
+      borderRadius: BorderRadius.circular(8.0),
+      border: Border.all(
+        color: borderButtonColor,
+        width: 1.5,
+      ),
+      boxShadow: [
+        BoxShadow(
+          color: shadowButtonColor,
+          blurRadius: 5.0,
+          spreadRadius: 0.25,
+          offset: const Offset(5, 5),
+        ),
+      ],
+    );
+  }
+
+  static BoxDecoration settingsItemBuilderUpperLayerBoxDecorations(context) {
+    final buttonUpperLayerColor =
+        ThemeApp.settingsButtonUpperLayerColorThemeApp(context);
+    return BoxDecoration(
+      color: buttonUpperLayerColor,
+      borderRadius: BorderRadius.circular(8.0),
+    );
+  }
 }

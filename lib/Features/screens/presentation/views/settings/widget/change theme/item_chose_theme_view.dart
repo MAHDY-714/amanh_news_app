@@ -1,5 +1,5 @@
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/icon_active_in_item_theme.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/image_in_item_theme.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/change%20theme/icon_active_in_item_theme.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/change%20theme/image_in_item_theme.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/styles/themes/theme_app.dart';

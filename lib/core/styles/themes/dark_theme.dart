@@ -1,16 +1,19 @@
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 ThemeData darkTheme(context) {
   return ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppColor.transparent,
     brightness: Brightness.light,
-    // applyElevationOverlayColor: false,
-    // brightness: SystemUiOverlayStyle(
-    //   statusBarColor: AppColor.redDeep,
-    //   statusBarBrightness: Brightness.dark,
-    // ).statusBarBrightness,
+    appBarTheme: const AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle(
+        statusBarColor: AppColor.redDeep8,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    ),
+    applyElevationOverlayColor: false,
     primaryColor: AppColor.white38,
     hoverColor: AppColor.redDeep6,
     dividerColor: AppColor.white24,
@@ -27,8 +30,9 @@ ThemeData darkTheme(context) {
           AppColor.black38, // button Upper Layer Color In Settings Screen
       surface: AppColor.white70, // icon Color In Settings Screen
       onSurface: AppColor.redDeep3, //  icon Mode Color In Settings Screen
-      error: AppColor.white12,
-      onError: AppColor.white12,
+      error: AppColor.white54, //border about body color In Settings Screen
+      onError:
+          AppColor.redDeep10, //background about body color In Settings Screen
     ),
     textTheme: TextTheme(
       titleLarge: TextStyles.categoryTextStyle.copyWith(
@@ -44,6 +48,9 @@ ThemeData darkTheme(context) {
         color: AppColor.white70,
       ),
       displayMedium: TextStyles.formFieldTextStyle.copyWith(
+        color: AppColor.white70,
+      ),
+      labelLarge: TextStyles.codeSettingsTextStyle.copyWith(
         color: AppColor.white70,
       ),
       labelMedium: TextStyles.errorTextStyle.copyWith(

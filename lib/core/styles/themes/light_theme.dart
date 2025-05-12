@@ -12,7 +12,7 @@ ThemeData lightTheme(context) {
         statusBarIconBrightness: Brightness.light,
       ),
     ),
-    applyElevationOverlayColor: true,
+    applyElevationOverlayColor: false,
     primaryColor: AppColor.redDeep,
     hoverColor: AppColor.white,
     dividerColor: AppColor.black26,
@@ -30,8 +30,8 @@ ThemeData lightTheme(context) {
           AppColor.white70, // button Upper Layer Color In Settings Screen
       surface: AppColor.black54, // icon Color In Settings Screen
       onSurface: AppColor.black54, //  icon Mode Color In Settings Screen
-      error: AppColor.white12,
-      onError: AppColor.white12,
+      error: AppColor.black87, //border about body color In Settings Screen
+      onError: AppColor.pink, //background about body color In Settings Screen
     ),
     textTheme: const TextTheme(
       titleLarge: TextStyles.categoryTextStyle,
@@ -39,6 +39,7 @@ ThemeData lightTheme(context) {
       titleSmall: TextStyles.dateTextStyle,
       displayLarge: TextStyles.settingsTitlesTextStyle,
       displayMedium: TextStyles.formFieldTextStyle,
+      labelLarge: TextStyles.codeSettingsTextStyle,
       labelMedium: TextStyles.errorTextStyle,
     ),
     inputDecorationTheme: InputDecorationTheme(

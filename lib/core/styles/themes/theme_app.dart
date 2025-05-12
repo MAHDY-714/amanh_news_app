@@ -36,4 +36,8 @@ abstract class ThemeApp {
       Theme.of(context).colorScheme.surface;
   static iconModeColorThemeApp(context) =>
       Theme.of(context).colorScheme.onSurface;
+  static backgroundAboutBodyColorThemeApp(context) =>
+      Theme.of(context).colorScheme.onError;
+  static borderAboutBodyColorThemeApp(context) =>
+      Theme.of(context).colorScheme.error;
 }

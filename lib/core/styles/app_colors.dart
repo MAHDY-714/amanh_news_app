@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 abstract class AppColor {
   AppColor._();
-  static const pink = Color(0x46FFCACA);
-  static const pink2 = Color(0xFFFFC5C5);
-  static const pink3 = Color(0xFFFF5C59);
+  static const pink = Color(0x29FFCACA);
+  static const pink2 = Color(0x46FFCACA);
+  static const pink3 = Color(0xFFFFC5C5);
+  static const pink4 = Color(0xFFFF5C59);
   static const red = Color(0xFFD00303);
   static const red2 = Color(0xFFAE0000);
   static const red3 = Color(0xFF950000);

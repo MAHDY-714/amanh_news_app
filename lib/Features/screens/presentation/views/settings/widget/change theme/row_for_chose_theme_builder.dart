@@ -1,5 +1,5 @@
 import 'package:amanh_news_app/Features/screens/presentation/manager/settings%20cubit/settings_cubit.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/item_chose_theme_view.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/change%20theme/item_chose_theme_view.dart';
 import 'package:amanh_news_app/core/styles/assets/assets_images.dart';
 import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:flutter/material.dart';

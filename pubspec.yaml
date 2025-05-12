@@ -64,6 +64,7 @@ dependencies:
   readmore: ^3.0.0
   shared_preferences: ^2.5.1
   super_context_menu: ^0.8.24
+  msh_checkbox: ^2.0.1
 
 flutter_launcher_icons:
   android: "launcher_icon"

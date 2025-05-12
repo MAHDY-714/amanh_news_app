@@ -8,14 +8,18 @@ class NavBarBodyView extends StatelessWidget {
   const NavBarBodyView({super.key});
   @override
   Widget build(BuildContext context) {
-    return const BodyColor(
+    return BodyColor(
       child: Scaffold(
-        body: SafeArea(
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(0.0),
+          child: AppBar(),
+        ),
+        body: const SafeArea(
           child: HomeView(),
         ),
-        floatingActionButton: HomeButtonInNavBar(),
+        floatingActionButton: const HomeButtonInNavBar(),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        bottomNavigationBar: BottomNavBar(),
+        bottomNavigationBar: const BottomNavBar(),
       ),
     );
   }
