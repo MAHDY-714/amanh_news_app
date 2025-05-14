@@ -14,25 +14,30 @@ class NewsCategoriesListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var cubi = BlocProvider.of<HomeCubit>(context);
-    return Container(
-      height:
-          kHeightConditions(context, valueIsTrue: 140.0, valueIsFalse: 160.0),
-      width: kWidth(context),
-      child: ListView.builder(
-        itemBuilder: ((context, index) => InkWell(
-              onTap: () {
-                cubi.getCategoryHome(index);
-              },
-              child: NewsCategoriesItemBuilder(
-                imageCategory: AssetsImages.newsCategoriesImages[index],
-                nameCategory: kNewsCategoriesName[index],
-                isActive: cubi.currentCategory == index ? true : false,
-              ),
-            )),
-        itemCount: kNewsCategoriesName.length - 1,
-        scrollDirection: Axis.horizontal,
-        shrinkWrap: true,
-      ),
+    return BlocBuilder<HomeCubit, HomeState>(
+      builder: (BuildContext context, state) {
+        return Container(
+          height: kHeightConditions(context,
+              valueIsTrue: 140.0, valueIsFalse: 160.0),
+          width: kWidth(context),
+          child: ListView.builder(
+            itemBuilder: ((context, index) => InkWell(
+                  onTap: () {
+                    cubi.getCategoryHome(index);
+                    // cubi.changeTheme(context, mode: kMode, index: index);
+                  },
+                  child: NewsCategoriesItemBuilder(
+                    imageCategory: AssetsImages.newsCategoriesImages[index],
+                    nameCategory: kNewsCategoriesName[index],
+                    isActive: cubi.currentCategory == index ? true : false,
+                  ),
+                )),
+            itemCount: kNewsCategoriesName.length - 1,
+            scrollDirection: Axis.horizontal,
+            shrinkWrap: true,
+          ),
+        );
+      },
     );
   }
 }

@@ -9,8 +9,14 @@ sealed class SettingsState extends Equatable {
 
 final class SettingsInitial extends SettingsState {}
 
-final class ChangeThemeToDarkModeSettingsState extends SettingsState {}
+final class ChangeThemeToDarkModeSettingsState extends SettingsState {
+  final bool mode;
+  ChangeThemeToDarkModeSettingsState({this.mode = true});
+}
 
-final class ChangeThemeToLightModeSettingsState extends SettingsState {}
+final class ChangeThemeToLightModeSettingsState extends SettingsState {
+  final bool mode;
+  ChangeThemeToLightModeSettingsState({this.mode = false});
+}
 
 final class ChangeThemeModeSettingsState extends SettingsState {}

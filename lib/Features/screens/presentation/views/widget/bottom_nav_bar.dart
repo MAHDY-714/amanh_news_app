@@ -25,9 +25,8 @@ class BottomNavBar extends StatelessWidget {
         border: BorderDirectional(
           top: BorderSide(
             // color: AppColor.redDeep2,
-            color: kMode
-                ? NavBarThemeApp.borderColorNavBarDarkTheme(context)
-                : NavBarThemeApp.borderColorNavBarLightTheme(context),
+            color: NavBarThemeApp.borderColorNavBarTheme(context),
+            // : NavBarThemeApp.borderColorNavBarLightTheme(context),
             width: 3.0,
           ),
         ),

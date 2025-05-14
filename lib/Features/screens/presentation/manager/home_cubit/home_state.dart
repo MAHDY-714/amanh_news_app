@@ -17,3 +17,6 @@ final class HomeFailuresState extends HomeState {
 
   HomeFailuresState({required this.errorMessage});
 }
+
+final class HomeChangeToDarkModeState extends HomeState {}
+final class HomeChangeToLightModeState extends HomeState {}

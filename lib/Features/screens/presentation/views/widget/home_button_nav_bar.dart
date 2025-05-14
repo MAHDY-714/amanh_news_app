@@ -14,50 +14,55 @@ class HomeButtonInNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var cubi = BlocProvider.of<HomeCubit>(context);
-    return ItemIsActive(
-      isActive: cubi.currentCategory == 6 ? true : false,
-      radius: kWidthConditions(
-        context,
-        valueIsTrue: 29.0,
-        valueIsFalse: 35.0,
-      ),
-      glowRadiusFactor: 0.2,
-      child: CircleAvatar(
-        backgroundColor:
-            FloatingActionButtonThemeApp.backgroundFloatingButtonThemeApp(
-                context),
-        radius:
-            kWidthConditions(context, valueIsTrue: 30.0, valueIsFalse: 35.0),
-        child: FloatingActionButton.large(
-          onPressed: () {
-            cubi.currentCategory = 6;
-            log('the home button is active ${cubi.currentCategory}');
-            cubi.getCategoryHome(cubi.currentCategory);
-          },
-          elevation: 0.0,
-          splashColor: AppColor.pink3,
-          backgroundColor:
-              FloatingActionButtonThemeApp.backgroundFloatingButtonThemeApp(
-                  context),
-          shape: CircleBorder(
-            side: BorderSide(
-              color: FloatingActionButtonThemeApp
-                  .borderColorFloatingButtonThemeApp(context),
-              width: 2.5,
+    return BlocBuilder<HomeCubit, HomeState>(
+      builder: (context, state) {
+        return ItemIsActive(
+          isActive: cubi.currentCategory == 6 ? true : false,
+          radius: kWidthConditions(
+            context,
+            valueIsTrue: 29.0,
+            valueIsFalse: 35.0,
+          ),
+          glowRadiusFactor: cubi.currentCategory == 6 ? 0.2 : 0.0,
+          child: CircleAvatar(
+            backgroundColor:
+                FloatingActionButtonThemeApp.backgroundFloatingButtonThemeApp(
+                    context),
+            radius: kWidthConditions(context,
+                valueIsTrue: 30.0, valueIsFalse: 35.0),
+            child: FloatingActionButton.large(
+              onPressed: () {
+                cubi.currentCategory = 6;
+                log('the home button is active ${cubi.currentCategory}');
+                cubi.getCategoryHome(
+                    cubi.currentCategory);
+              },
+              elevation: 0.0,
+              splashColor: AppColor.pink3,
+              backgroundColor:
+                  FloatingActionButtonThemeApp.backgroundFloatingButtonThemeApp(
+                      context),
+              shape: CircleBorder(
+                side: BorderSide(
+                  color: FloatingActionButtonThemeApp
+                      .borderColorFloatingButtonThemeApp(context),
+                  width: 2.5,
+                ),
+              ),
+              child: Icon(
+                IconBroken.Home,
+                size: kWidthConditions(
+                  context,
+                  valueIsTrue: 35.0,
+                  valueIsFalse: 40.0,
+                ),
+                color: FloatingActionButtonThemeApp.iconFloatingButtonThemeApp(
+                    context),
+              ),
             ),
           ),
-          child: Icon(
-            IconBroken.Home,
-            size: kWidthConditions(
-              context,
-              valueIsTrue: 35.0,
-              valueIsFalse: 40.0,
-            ),
-            color: FloatingActionButtonThemeApp.iconFloatingButtonThemeApp(
-                context),
-          ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

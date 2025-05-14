@@ -12,7 +12,10 @@ abstract class ThemeApp {
   static ThemeMode getThemeMode(context) =>
       kMode ? ThemeMode.dark : ThemeMode.light;
 
+  
+  static appBarTheme(context) => Theme.of(context).appBarTheme;
   static noBodyIconColorThemeApp(context) => Theme.of(context).primaryColor;
+
   static backgroundNewsItemColorThemeApp(context) =>
       Theme.of(context).hoverColor;
   static backgroundImageNewsItemColorThemeApp(context) =>

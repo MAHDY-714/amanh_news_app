@@ -17,13 +17,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyBlocObserver();
   await CacheHelper.init();
-  // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-  //   statusBarColor: kMode
-  //       ? AppColor.redDeep
-  //       : AppColor.redDeep6, // تحديد لون الـ Status Bar
-  //   statusBarIconBrightness:
-  //       Brightness.light, // التحكم في لون أيقونات الـ Status Bar
-  // ));
   log('is Mode in Main $kMode');
   runApp(const AMANHNews());
 }
@@ -47,7 +40,7 @@ class AMANHNews extends StatelessWidget {
         return MaterialApp.router(
           theme: ThemeApp.lightThemeMode(context),
           darkTheme: ThemeApp.darkThemeMode(context),
-          themeMode: kMode ? ThemeMode.dark : ThemeMode.light,
+          themeMode: ThemeApp.getThemeMode(context),
           debugShowCheckedModeBanner: false,
           routerConfig: AppRouter.routers,
         );

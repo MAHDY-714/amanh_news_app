@@ -35,7 +35,7 @@ class ItemsInSettingsListView extends StatelessWidget {
       AppColor.skyDeep,
       AppColor.orangeDeep,
     ];
-    int indexItem = 3 ;
+    int indexItem = 0;
     return Container(
       padding: const EdgeInsets.all(8.0),
       child: ListView.builder(

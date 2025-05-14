@@ -19,11 +19,14 @@ abstract class Decorations {
   }
 
   static BoxDecoration newsItemBuilderBoxDecorations(BuildContext context) {
+    final backgroundNewsItemColor =
+        ThemeApp.backgroundNewsItemColorThemeApp(context);
+    final borderNewsItemColor = ThemeApp.borderNewsItemColorThemeApp(context);
     return BoxDecoration(
       // color: AppColor.white,
-      color: ThemeApp.backgroundNewsItemColorThemeApp(context),
+      color: backgroundNewsItemColor,
       border: Border.all(
-        color: ThemeApp.borderNewsItemColorThemeApp(context),
+        color: borderNewsItemColor,
         width: 1.0,
       ),
       borderRadius: BorderRadius.circular(16.0),

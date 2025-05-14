@@ -11,11 +11,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeBodyView extends StatelessWidget {
   const HomeBodyView({super.key});
-
+// state is ChangeThemeToDarkModeSettingsState
+// state is ChangeThemeToLightModeSettingsState,
   @override
   Widget build(BuildContext context) {
     var articlesNewsModel =
         BlocProvider.of<HomeCubit>(context).articlesNewsModel;
+
     log(articlesNewsModel.toString());
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (BuildContext context, HomeState state) {
@@ -25,23 +27,25 @@ class HomeBodyView extends StatelessWidget {
             children: [
               const NewsCategoriesListView(),
               ConditionalBuilder(
-                condition: state is! HomeLoadingState,
-                builder: (
-                  context,
-                ) {
-                  if (state is HomeSuccessState) {
-                    return NewsListView(
-                        articlesNewsModel: state.articlesNewsModel);
-                  } else if (state is HomeFailuresState) {
-                    return NoBodyView(
-                      errorMessage: state.errorMessage,
-                    );
-                  } else {
+                  condition: state is! HomeLoadingState,
+                  builder: (
+                    context,
+                  ) {
+                    if (state is HomeSuccessState) {
+                      return NewsListView(
+                          articlesNewsModel: state.articlesNewsModel);
+                    } else if (state is HomeFailuresState) {
+                      return NoBodyView(
+                        errorMessage: state.errorMessage,
+                      );
+                    } else {
+                      return const CircleIndicatorLoadingWidget();
+                    }
+                  },
+                  fallback: (context) {
+                    // cubi.changeThemeNavBar(context, mode: kMode, index: 0);
                     return const CircleIndicatorLoadingWidget();
-                  }
-                },
-                fallback: (context) => const CircleIndicatorLoadingWidget(),
-              ),
+                  }),
             ],
           ),
         );

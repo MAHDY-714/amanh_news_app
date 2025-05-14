@@ -4,6 +4,7 @@ import 'package:amanh_news_app/Features/screens/data/model/articles_news_model/a
 import 'package:amanh_news_app/Features/screens/data/repo/home_repo.dart';
 import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'home_state.dart';
 
@@ -31,20 +32,23 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   void getCategoryHome(index) {
+    // var cubiSettings = BlocProvider.of<SettingsCubit>(context);
+    log('mode in change theme in home cubit is $kMode');
     currentCategory = index;
     log(currentCategory.toString());
     log(index.toString());
+    // emit(HomeLoadingState());
+    // cubiSettings.changeThemeApp(isMode: mode);
     getHomeData(category: kNewsCategoriesName[index]);
   }
 
-// void changeThemeApp({required bool isMode}) {
-//     log('the cubit for Setting started');
-//     if (isMode) {
-//       CacheHelper.saveData(key: 'isMode', value: true); // dark mode
-//       emit(ChangeThemeToDarkModeSettingsState());
-//     } else {
-//       CacheHelper.saveData(key: 'isMode', value: false); // light mode
-//       emit(ChangeThemeToDarkModeSettingsState());
-//     }
-//   }
+  void changeThemeHome(context, {required bool mode, required int index}) {
+    if (mode) {
+      emit(HomeChangeToDarkModeState());
+      getCategoryHome(index);
+    } else {
+      emit(HomeChangeToLightModeState());
+      getCategoryHome(index);
+    }
+  }
 }

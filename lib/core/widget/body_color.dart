@@ -5,16 +5,8 @@ import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:flutter/material.dart';
 
 class BodyColor extends StatelessWidget {
-  const BodyColor(
-      {super.key,
-      required this.child,
-      this.bottomNavigationBar,
-      this.floatingActionButton,
-      this.floatingActionButtonLocation});
+  const BodyColor({super.key, required this.child});
   final Widget child;
-  final Widget? bottomNavigationBar;
-  final Widget? floatingActionButton;
-  final FloatingActionButtonLocation? floatingActionButtonLocation;
   @override
   Widget build(BuildContext context) {
     return Theme(
@@ -37,10 +29,6 @@ class BodyColor extends StatelessWidget {
           ),
         ),
         child: child,
-        // bottomNavigationBar: bottomNavigationBar,
-        // floatingActionButton: floatingActionButton,
-        // floatingActionButtonLocation:
-        //     floatingActionButtonLocation, // centerDocked
       ),
     );
   }

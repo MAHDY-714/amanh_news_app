@@ -5,8 +5,6 @@ class NavBarView extends StatelessWidget {
   const NavBarView({super.key});
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: NavBarBodyView(),
-    );
+    return const NavBarBodyView();
   }
 }
