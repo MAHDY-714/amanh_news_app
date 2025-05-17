@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:amanh_news_app/Features/screens/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/news_categories_list_view.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/news/new_list_view.dart';
+import 'package:amanh_news_app/core/utils/cubit_objects.dart';
 import 'package:amanh_news_app/core/widget/circle_indicator_loading_widget.dart';
 import 'package:amanh_news_app/core/widget/no_body_widget.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
@@ -15,8 +16,7 @@ class HomeBodyView extends StatelessWidget {
 // state is ChangeThemeToLightModeSettingsState,
   @override
   Widget build(BuildContext context) {
-    var articlesNewsModel =
-        BlocProvider.of<HomeCubit>(context).articlesNewsModel;
+    var articlesNewsModel = Cubits.homeCubit(context).articlesNewsModel;
 
     log(articlesNewsModel.toString());
     return BlocBuilder<HomeCubit, HomeState>(
@@ -43,7 +43,6 @@ class HomeBodyView extends StatelessWidget {
                     }
                   },
                   fallback: (context) {
-                    // cubi.changeThemeNavBar(context, mode: kMode, index: 0);
                     return const CircleIndicatorLoadingWidget();
                   }),
             ],

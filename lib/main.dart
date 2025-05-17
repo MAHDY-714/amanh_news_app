@@ -1,15 +1,10 @@
 import 'dart:developer';
-
-import 'package:amanh_news_app/Features/screens/data/repo/home_repo_implement.dart';
-import 'package:amanh_news_app/Features/screens/presentation/manager/home_cubit/home_cubit.dart';
-import 'package:amanh_news_app/Features/screens/presentation/manager/settings%20cubit/settings_cubit.dart';
-import 'package:amanh_news_app/core/services/api_services.dart';
 import 'package:amanh_news_app/core/styles/themes/theme_app.dart';
 import 'package:amanh_news_app/core/utils/app_router.dart';
 import 'package:amanh_news_app/core/utils/bloc_observer.dart';
 import 'package:amanh_news_app/core/utils/cache_helper.dart';
 import 'package:amanh_news_app/core/utils/constance.dart';
-import 'package:dio/dio.dart';
+import 'package:amanh_news_app/core/utils/cubit_objects.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,14 +22,8 @@ class AMANHNews extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (context) =>
-              HomeCubit(HomeRepoImplement(ApiServices(dio: Dio())))
-                ..getCategoryHome(6),
-        ),
-        BlocProvider(
-          create: (context) => SettingsCubit(),
-        ),
+        Cubits.homeCubitProvider(context),
+        Cubits.settingsCubitProvider(context),
       ],
       child: Builder(builder: (context) {
         return MaterialApp.router(

@@ -26,7 +26,7 @@ class NewsItemBuilder extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
       child: Container(
         height:
-            kHeightConditions(context, valueIsTrue: 255.0, valueIsFalse: 310.0),
+            kHeightConditions(context, valueIsTrue: 250.0, valueIsFalse: 310.0),
         width: double.infinity,
         decoration: BoxDecoration(
           // color: AppColor.white,

@@ -1,6 +1,7 @@
 import 'package:amanh_news_app/Features/screens/presentation/manager/settings%20cubit/settings_cubit.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/body%20content/body_content_for_settings_item.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/row_items_in_item_builder.dart';
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 
 class SettingsItemBuilder extends StatelessWidget {
@@ -33,13 +34,16 @@ class SettingsItemBuilder extends StatelessWidget {
           icon: icon,
           color: color,
         ),
-        if (indexItem == index)
-          BodyContentForItemSettings(
-            cubi: cubi,
-            index: indexItem,
-          )
-        else
-          sizedBox,
+        ConditionalBuilder(
+          condition: cubi.indexItem == index,
+          builder: (context) {
+            return BodyContentForItemSettings(
+              cubi: cubi,
+              index: cubi.indexItem,
+            );
+          },
+          fallback: (context) => sizedBox,
+        ),
       ],
     );
   }

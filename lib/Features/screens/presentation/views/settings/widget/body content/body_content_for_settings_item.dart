@@ -1,9 +1,6 @@
 import 'package:amanh_news_app/Features/screens/presentation/manager/settings%20cubit/settings_cubit.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/about_for_app_body.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/body%20content/news_countries_list_view.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/body%20content/news_language_list.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/settings/widget/change%20theme/row_for_chose_theme_builder.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
+import 'package:amanh_news_app/core/utils/cubit_objects.dart';
 import 'package:flutter/material.dart';
 
 class BodyContentForItemSettings extends StatefulWidget {
@@ -32,11 +29,8 @@ class _BodyContentForItemSettingsState extends State<BodyContentForItemSettings>
       duration: const Duration(milliseconds: 700),
       reverseDuration: const Duration(milliseconds: 700),
     );
-    animationController.forward(from: 0.0);
-    animationController.addListener(() {
-      setState(() {});
-    });
-
+    animationController.forward();
+    animationController.reverseDuration = const Duration(milliseconds: 700);
     super.initState();
   }
 
@@ -47,19 +41,13 @@ class _BodyContentForItemSettingsState extends State<BodyContentForItemSettings>
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> listBodyContent = [
-      RowForChoseThemeBuilder(cubi: widget.cubi),
-      const NewsCountriesList(),
-      const NewsLanguageList(),
-      const AboutForAppBody(),
-    ];
-
     final List<double> listHeight = [
       kHeight(context) * 0.3,
       kHeight(context) * 0.35,
-      kHeight(context) * 0.13,
+      kHeight(context) * 0.15,
       kHeight(context) * 0.42,
     ];
+    var cubi = Cubits.settingsCubit(context);
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 0.0),
@@ -75,7 +63,7 @@ class _BodyContentForItemSettingsState extends State<BodyContentForItemSettings>
               child: SingleChildScrollView(
                   scrollDirection: Axis.vertical,
                   physics: const BouncingScrollPhysics(),
-                  child: listBodyContent[widget.index]),
+                  child: cubi.currentContent),
             );
           }),
     );

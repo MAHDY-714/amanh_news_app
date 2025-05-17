@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:amanh_news_app/Features/screens/presentation/manager/home_cubit/home_cubit.dart';
+import 'package:amanh_news_app/core/utils/cubit_objects.dart';
 import 'package:amanh_news_app/core/widget/item_active.dart';
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
@@ -13,7 +14,7 @@ class HomeButtonInNavBar extends StatelessWidget {
   const HomeButtonInNavBar({super.key});
   @override
   Widget build(BuildContext context) {
-    var cubi = BlocProvider.of<HomeCubit>(context);
+    var cubi =  Cubits.homeCubit(context);
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         return ItemIsActive(

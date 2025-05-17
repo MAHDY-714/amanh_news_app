@@ -3,6 +3,7 @@ import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/c
 import 'package:amanh_news_app/core/styles/assets/assets_images.dart';
 import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/utils/constance.dart';
+import 'package:amanh_news_app/core/utils/cubit_objects.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,7 +14,7 @@ class NewsCategoriesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cubi = BlocProvider.of<HomeCubit>(context);
+    var cubi = Cubits.homeCubit(context);
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (BuildContext context, state) {
         return Container(

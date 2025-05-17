@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:amanh_news_app/core/styles/media_quire_and_spaces.dart';
 import 'package:amanh_news_app/core/styles/themes/theme%20styles/text_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +14,10 @@ class NewsTitleAndDateInItemBuilder extends StatelessWidget {
   final String date;
   @override
   Widget build(BuildContext context) {
+    final titleTheme = TextThemeApp.themeTitleNews(context);
+    final dateTheme = TextThemeApp.themeDateNews(context);
+    log('Width: ${kWidth(context)}');
+    log('Height: ${kHeight(context)}');
     return Expanded(
       flex: 3,
       child: Container(
@@ -22,13 +29,13 @@ class NewsTitleAndDateInItemBuilder extends StatelessWidget {
           children: [
             Text(
               '$title',
-              maxLines: 3,
-              style: TextThemeApp.themeTitleNews(context),
+              maxLines: 2,
+              style: titleTheme,
             ),
             Text(
               '$date',
               maxLines: 1,
-              style: TextThemeApp.themeDateNews(context),
+              style: dateTheme,
             ),
           ],
         ),

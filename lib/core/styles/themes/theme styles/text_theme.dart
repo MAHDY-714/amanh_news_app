@@ -9,20 +9,20 @@ abstract class TextThemeApp extends ThemeApp {
       Theme.of(context).textTheme.titleLarge!.copyWith(
             fontFamily: isActive
                 ? AssetsFontFamily.bitter900
-                : AssetsFontFamily.bitter600,
+                : AssetsFontFamily.bitter400,
             fontSize: kWidthConditionsFonts(
               context,
               isConditions: isActive,
-              fontSizeLargeTrue: 13.0,
-              fontSizeLargeFalse: 18.0,
-              fontSizeSmallTrue: 9.0,
-              fontSizeSmallFalse: 13.0,
+              fontSizeLargeTrue: 13.0, // small phone
+              fontSizeLargeFalse: 15.0, // large  phone
+              fontSizeSmallTrue: 13.0, // small phone
+              fontSizeSmallFalse: 15.0, // large phone
             ),
           );
   static themeTitleNews(context) =>
       Theme.of(context).textTheme.titleMedium!.copyWith(
             fontSize: kWidthConditions(context,
-                valueIsTrue: 11.0, valueIsFalse: 14.0),
+                valueIsTrue: 13.0, valueIsFalse: 14.0),
           );
   static themeDateNews(context) =>
       Theme.of(context).textTheme.titleSmall!.copyWith(

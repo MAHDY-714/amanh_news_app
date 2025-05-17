@@ -14,7 +14,7 @@ class NewsLanguageList extends StatelessWidget {
 
     int indexItemSelected = 2;
     return SizedBox(
-      height: kHeight(context) * 0.13,
+      height: kHeight(context) * 0.14,
       width: kWidth(context),
       child: ListView.separated(
         scrollDirection: Axis.vertical,

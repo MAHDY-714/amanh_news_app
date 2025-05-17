@@ -19,4 +19,10 @@ final class ChangeThemeToLightModeSettingsState extends SettingsState {
   ChangeThemeToLightModeSettingsState({this.mode = false});
 }
 
-final class ChangeThemeModeSettingsState extends SettingsState {}
+final class OpenSettingsItemModeContentState extends SettingsState {}
+
+final class OpenSettingsItemCountryContentState extends SettingsState {}
+
+final class OpenSettingsItemLanguageContentState extends SettingsState {}
+
+final class OpenSettingsItemAboutContentState extends SettingsState {}

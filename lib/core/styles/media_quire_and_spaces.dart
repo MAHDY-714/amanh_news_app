@@ -13,9 +13,9 @@ dynamic kWidthConditions(
   required dynamic valueIsTrue,
   required dynamic valueIsFalse,
 }) {
-  return kWidth(context) >= 340 && kWidth(context) <= 380
-      ? valueIsTrue
-      : valueIsFalse;
+  return kWidth(context) >= 350 && kWidth(context) <= 400
+      ? valueIsTrue // small phone
+      : valueIsFalse; // large phone
 }
 
 dynamic kHeightConditions(
@@ -23,9 +23,9 @@ dynamic kHeightConditions(
   required dynamic valueIsTrue,
   required dynamic valueIsFalse,
 }) {
-  return kHeight(context) >= 760 && kHeight(context) <= 850
-      ? valueIsTrue
-      : valueIsFalse;
+  return kHeight(context) >= 760 && kHeight(context) <= 900
+      ? valueIsTrue // small phone
+      : valueIsFalse; // large phone
 }
 
 dynamic kWidthConditionsFonts(
@@ -37,13 +37,17 @@ dynamic kWidthConditionsFonts(
   required fontSizeSmallFalse,
 }) {
   if (isConditions) {
-    return kWidth(context) >= 340 && kWidth(context) <= 380
-        ? fontSizeLargeTrue
-        : fontSizeLargeFalse;
+    return kWidthConditions(
+      context,
+      valueIsTrue: fontSizeLargeTrue, //small phone
+      valueIsFalse: fontSizeLargeFalse, //large phone
+    ); // large phone
   } else {
-    return kWidth(context) >= 340 && kWidth(context) <= 380
-        ? fontSizeSmallTrue
-        : fontSizeSmallFalse;
+    return kWidthConditions(
+      context,
+      valueIsTrue: fontSizeSmallTrue, //small phone
+      valueIsFalse: fontSizeSmallFalse, //large phone
+    ); // small phone
   }
 }
 
@@ -56,12 +60,16 @@ dynamic kHeightConditionsFonts(
   required bool isConditions,
 }) {
   if (isConditions) {
-    return kHeight(context) >= 760 && kHeight(context) <= 850
-        ? fontSizeLargeTrue
-        : fontSizeLargeFalse;
+    return kHeightConditions(
+      context,
+      valueIsTrue: fontSizeLargeTrue,
+      valueIsFalse: fontSizeLargeFalse,
+    ); // large phone
   } else {
-    return kHeight(context) >= 760 && kHeight(context) <= 850
-        ? fontSizeSmallTrue
-        : fontSizeSmallFalse;
+    return kHeightConditions(
+      context,
+      valueIsTrue: fontSizeSmallTrue,
+      valueIsFalse: fontSizeSmallFalse,
+    ); // small phone
   }
 }

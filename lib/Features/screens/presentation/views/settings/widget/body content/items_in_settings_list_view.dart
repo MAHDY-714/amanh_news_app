@@ -3,7 +3,9 @@ import 'package:amanh_news_app/Features/screens/presentation/views/settings/widg
 import 'package:amanh_news_app/core/styles/app_colors.dart';
 import 'package:amanh_news_app/core/styles/themes/theme_app.dart';
 import 'package:amanh_news_app/core/utils/constance.dart';
+import 'package:amanh_news_app/core/utils/cubit_objects.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -35,26 +37,31 @@ class ItemsInSettingsListView extends StatelessWidget {
       AppColor.skyDeep,
       AppColor.orangeDeep,
     ];
-    int indexItem = 0;
-    return Container(
-      padding: const EdgeInsets.all(8.0),
-      child: ListView.builder(
-        itemBuilder: (context, index) => SettingsItemBuilder(
-          title: listTitles[index],
-          icon: listIcons[index],
-          color: listColors[index],
-          onTap: () {
-            indexItem = index;
-          },
-          indexItem: indexItem,
-          index: index,
-          cubi: cubi,
-        ),
-        itemCount: listTitles.length,
-        physics: const NeverScrollableScrollPhysics(),
-        scrollDirection: Axis.vertical,
-        shrinkWrap: true,
-      ),
+    var cubi = Cubits.settingsCubit(context);
+    return BlocBuilder<SettingsCubit, SettingsState>(
+      builder: (BuildContext context, SettingsState state) {
+        return Container(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView.builder(
+            itemBuilder: (context, index) => SettingsItemBuilder(
+              title: listTitles[index],
+              icon: listIcons[index],
+              color: listColors[index],
+              onTap: () {
+                // indexItem = index;
+                cubi.openSettingsItemContent(context, index: index);
+              },
+              indexItem: cubi.indexItem,
+              index: index,
+              cubi: cubi,
+            ),
+            itemCount: listTitles.length,
+            physics: const NeverScrollableScrollPhysics(),
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+          ),
+        );
+      },
     );
   }
 }

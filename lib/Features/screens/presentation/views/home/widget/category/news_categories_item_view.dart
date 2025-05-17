@@ -18,6 +18,7 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const sizedBox = SizedBox(height: 2.0);
     return Padding(
       padding:
           const EdgeInsetsDirectional.symmetric(horizontal: 4.0, vertical: 4.0),
@@ -48,14 +49,13 @@ class NewsCategoriesItemBuilder extends StatelessWidget {
               decoration:
                   Decorations.newsCategoryDecoration(image: imageCategory),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 4.0),
-              child: Text(
-                nameCategory,
-                style:
-                    TextThemeApp.themeNameCategory(context, isActive: isActive),
-              ),
+            sizedBox,
+            Text(
+              nameCategory,
+              style:
+                  TextThemeApp.themeNameCategory(context, isActive: isActive),
             ),
+            sizedBox,
             ItemIsActive(
               radius: kHeightConditions(
                 context,
