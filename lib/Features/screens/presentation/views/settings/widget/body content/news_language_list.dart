@@ -11,8 +11,6 @@ class NewsLanguageList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const space = SizedBox(height: 8.0);
-
-    int indexItemSelected = 2;
     return SizedBox(
       height: kHeight(context) * 0.14,
       width: kWidth(context),
@@ -27,8 +25,6 @@ class NewsLanguageList extends StatelessWidget {
           return ItemInBodyContentForSettingsItem(
             countryCode: kListCountries[index],
             countryLanguage: kListLanguage[index],
-            indexItem: index,
-            indexItemSelected: indexItemSelected,
           );
         },
       ),

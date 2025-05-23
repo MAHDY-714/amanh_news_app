@@ -14,7 +14,7 @@ class HomeButtonInNavBar extends StatelessWidget {
   const HomeButtonInNavBar({super.key});
   @override
   Widget build(BuildContext context) {
-    var cubi =  Cubits.homeCubit(context);
+    var cubi = Cubits.homeCubit(context);
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         return ItemIsActive(
@@ -35,8 +35,7 @@ class HomeButtonInNavBar extends StatelessWidget {
               onPressed: () {
                 cubi.currentCategory = 6;
                 log('the home button is active ${cubi.currentCategory}');
-                cubi.getCategoryHome(
-                    cubi.currentCategory);
+                cubi.getCategoryHome(cubi.currentCategory);
               },
               elevation: 0.0,
               splashColor: AppColor.pink3,

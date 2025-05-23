@@ -19,7 +19,14 @@ const kNewsCategoriesName = [
   'World',
 ];
 
-bool kMode = CacheHelper.getData(key: 'isMode') ?? false; // false by default
+bool kMode = CacheHelper.getData(key: 'isMode') ?? false; // false as a default
+int kCountryIndexItemSelected =
+    CacheHelper.getData(key: 'countryIndex') ?? 1; // eg as a default
+String kCountry =
+    CacheHelper.getData(key: 'country') ?? 'eg'; // eg as a default
+String kLanguage =
+    CacheHelper.getData(key: 'language') ?? 'en'; // ar as a default
+
 const kCountriesCode = <String>[
   'wo',
   'eg',
@@ -27,7 +34,7 @@ const kCountriesCode = <String>[
   'lb',
   'ly',
   'ma',
-  'ps',
+  // 'ps',
   'sa',
   'sy',
   'tn',
@@ -58,7 +65,7 @@ const kCountriesName = <String>[
   'Lebanon',
   'Libya',
   'Morocco',
-  'Palestine',
+  // 'Palestine',
   'Saudi Arabia',
   'Syria',
   'Tunisia',
@@ -82,6 +89,7 @@ const kCountriesName = <String>[
   'Ukraine',
   'Finland',
 ];
+
 const kListCountries = [
   'EG',
   'US',

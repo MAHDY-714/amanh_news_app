@@ -28,9 +28,7 @@ class HomeBodyView extends StatelessWidget {
               const NewsCategoriesListView(),
               ConditionalBuilder(
                   condition: state is! HomeLoadingState,
-                  builder: (
-                    context,
-                  ) {
+                  builder: (context) {
                     if (state is HomeSuccessState) {
                       return NewsListView(
                           articlesNewsModel: state.articlesNewsModel);

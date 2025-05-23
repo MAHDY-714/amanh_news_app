@@ -11,10 +11,17 @@ class HomeRepoImplement implements HomeRepo {
 
   HomeRepoImplement(this.apiServices);
   @override
-  Future<Either<Failures, List<ArticlesNewsModel>>> getNews(
-      {required String category}) async {
+  Future<Either<Failures, List<ArticlesNewsModel>>> getNews({
+    required String category,
+     String? country,
+     String? language,
+  }) async {
     try {
-      var data = await apiServices.getNews(category: category);
+      var data = await apiServices.getNewsData(
+        category: category,
+        country: country!,
+        language: language!,
+      );
       List<ArticlesNewsModel> newsModelList = [];
       for (var newsItem in data['results']) {
         newsModelList.add(ArticlesNewsModel.fromJson(newsItem));

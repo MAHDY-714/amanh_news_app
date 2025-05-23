@@ -26,3 +26,9 @@ final class OpenSettingsItemCountryContentState extends SettingsState {}
 final class OpenSettingsItemLanguageContentState extends SettingsState {}
 
 final class OpenSettingsItemAboutContentState extends SettingsState {}
+
+final class ChangeCountryNewsState extends SettingsState {}
+
+final class ChangeIconAndColorState extends SettingsState {}
+
+final class ChangeLanguageNewsState extends SettingsState {}

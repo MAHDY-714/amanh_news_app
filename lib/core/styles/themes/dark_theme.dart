@@ -22,7 +22,7 @@ ThemeData darkTheme(context) {
     cardColor: AppColor.redDeep5,
     colorScheme: const ColorScheme(
       brightness: Brightness.light,
-      primary: AppColor.redDeep10, //    border Button Color In Settings Screen
+      primary: AppColor.white24, //    border Button Color In Settings Screen
       onPrimary: AppColor.redDeep10, // shadow Button Color In Settings Screen
       secondary:
           AppColor.redDeep7, //  button Lower Layer Color In Settings Screen

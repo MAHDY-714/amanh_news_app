@@ -14,9 +14,16 @@ class HomeCubit extends Cubit<HomeState> {
   List<ArticlesNewsModel>? articlesNewsModel;
   int currentCategory = 6;
 
-  Future<void> getHomeData({required String category}) async {
+  Future<void> getHomeData(
+  {
+    required String category,
+  }) async {
     emit(HomeLoadingState());
-    final newsData = await homeRepo.getNews(category: category);
+    final newsData = await homeRepo.getNews(
+      category: category,
+      country: kCountry,
+      language: kLanguage,
+    );
     newsData.fold(
       (message) {
         log(message.errorMessage);
@@ -25,7 +32,7 @@ class HomeCubit extends Cubit<HomeState> {
       (articleNewsModelItem) {
         articlesNewsModel = articleNewsModelItem;
         log(category.toString());
-        log(articleNewsModelItem[0].toJson().toString());
+        // log(articleNewsModelItem[0].toJson().toString());
         emit(HomeSuccessState(articlesNewsModel: articleNewsModelItem));
       },
     );

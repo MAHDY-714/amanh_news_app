@@ -3,23 +3,20 @@ import 'package:dio/dio.dart';
 
 class ApiServices {
   static const basicUrl = 'https://newsdata.io/api/1/latest';
-  static const country = 'country=jo';
-  static const language = 'language=en';
+  // static const country = 'country=jo';
+  // static const language = 'language=en';
   // static const category = 'category=business';
   final Dio dio;
 
-ApiServices({required this.dio});
+  ApiServices({required this.dio});
 
-  Future<Map<String, dynamic>> getNews({required String category}) async {
+  Future<Map<String, dynamic>> getNewsData({
+    required String category,
+    required String country,
+    required String language,
+  }) async {
     var response = await dio.get(
-      '$basicUrl?$country&&apiKey=${ApiKey.apiKey2}&category=$category',
-      // options: Options(
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     'Authorization': ApiKey.apiKey,
-      //     'Accept': 'application/json',
-      //     'Accept-Language': 'ar-EG,ar;q=0.9',
-      //   },),
+      '$basicUrl?country=$country&language=$language&apiKey=${ApiKey.apiKey2}&category=$category',
     );
 
     return response.data;
