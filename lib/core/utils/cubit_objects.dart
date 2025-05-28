@@ -7,12 +7,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Cubits {
   Cubits._();
-  static SettingsCubit settingsCubit(context) =>
+  static SettingsCubit settings(context) =>
       BlocProvider.of<SettingsCubit>(context);
-  static HomeCubit homeCubit(context) => BlocProvider.of<HomeCubit>(context);
-  static BlocProvider<HomeCubit> homeCubitProvider(context) => BlocProvider(
+  static HomeCubit home(context) => BlocProvider.of<HomeCubit>(context);
+  static BlocProvider<HomeCubit> homeProvider(context) => BlocProvider(
       create: (context) => HomeCubit(HomeRepoImplement(ApiServices(dio: Dio())))
         ..getCategoryHome(6));
-  static BlocProvider<SettingsCubit> settingsCubitProvider(context) =>
+  static BlocProvider<SettingsCubit> settingsProvider(context) =>
       BlocProvider(create: (context) => SettingsCubit());
 }

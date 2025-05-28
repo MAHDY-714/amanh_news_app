@@ -44,10 +44,10 @@ class _BodyContentForItemSettingsState extends State<BodyContentForItemSettings>
     final List<double> listHeight = [
       kHeight(context) * 0.3,
       kHeight(context) * 0.35,
-      kHeight(context) * 0.15,
+      kHeight(context) * 0.16,
       kHeight(context) * 0.42,
     ];
-    var cubi = Cubits.settingsCubit(context);
+    var cubi = Cubits.settings(context);
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 0.0),

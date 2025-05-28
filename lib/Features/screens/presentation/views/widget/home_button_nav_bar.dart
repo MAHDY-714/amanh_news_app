@@ -14,7 +14,7 @@ class HomeButtonInNavBar extends StatelessWidget {
   const HomeButtonInNavBar({super.key});
   @override
   Widget build(BuildContext context) {
-    var cubi = Cubits.homeCubit(context);
+    var cubi = Cubits.home(context);
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
         return ItemIsActive(

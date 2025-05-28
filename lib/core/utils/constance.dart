@@ -9,6 +9,7 @@ const kNewsTitle2 =
     'College football notional championship score, Ohio State holds off Notre Dame to win title, 34-23 - Yahoo Sports';
 
 const kNewsDate = 'Friday, February 7, 2025';
+
 const kNewsCategoriesName = [
   'Technology',
   'Business',
@@ -21,44 +22,54 @@ const kNewsCategoriesName = [
 
 bool kMode = CacheHelper.getData(key: 'isMode') ?? false; // false as a default
 int kCountryIndexItemSelected =
-    CacheHelper.getData(key: 'countryIndex') ?? 1; // eg as a default
+    CacheHelper.getData(key: 'countryIndex') ?? 0; // eg as a default
+int kLanguageIndexItemSelected =
+    CacheHelper.getData(key: 'languageIndex') ?? 0; // eg as a default
 String kCountry =
-    CacheHelper.getData(key: 'country') ?? 'eg'; // eg as a default
+    CacheHelper.getData(key: 'country') ?? 'wo'; // eg as a default
 String kLanguage =
     CacheHelper.getData(key: 'language') ?? 'en'; // ar as a default
 
-const kCountriesCode = <String>[
-  'wo',
-  'eg',
-  'jo',
-  'lb',
-  'ly',
-  'ma',
-  // 'ps',
-  'sa',
-  'sy',
-  'tn',
-  'ae',
-  'au',
-  'ca',
-  'gb',
-  'us',
-  'br',
-  'cf',
-  'fr',
-  'de',
-  'se',
-  'cn',
-  'gr',
-  'in',
-  'jp',
-  'kr',
-  'kp',
-  'ru',
-  'ua',
-  'fi',
+const kCountriesCode = [
+  'wo', //   'World',
+  'eg', //   'Egypt',
+  'jo', //   'Jordan',
+  'lb', //   'Lebanon',
+  'ly', //   'Libya',
+  'ma', //   'Morocco',
+  // 'ps', // 'Palestine',
+  'sa', //   'Saudi Arabia',
+  'sy', //   'Syria',
+  'tn', //   'Tunisia',
+  'ae', //   'United Arab Emirates',
+  'al', //   'Albania',
+  'ar', // Argentina
+  'au', //   'Australia',
+  'ca', //   'Canada',
+  'gb', //   'United Kingdom',
+  'us', //   'United States of America',
+  'br', //   'Brazil',
+  // 'cf',  // 'Central African Republic',
+  'fr', //   'France',
+  'de', //   'Germany',
+  'cn', //   'China',
+  'gr', //   'Greece',
+  'in', //   'India (ml 'Malayalam')',
+  'IN', //   'India (hi 'Hindi')',
+  'it', // Italy
+  'jp', //   'Japan',
+  'kr', //   'South Korea',
+  'es', // Spain
+  'ch', //   'Switzerland',
+  'se', //   'Sweden',
+  // 'kp',    // 'North Korea',
+  'ru', //   'Russia',
+  'tr', //   'Turkey',
+  'th', // Thailand
+  'ua', //   'Ukraine',
+  // 'fi',   // 'Finland',
 ];
-const kCountriesName = <String>[
+const kCountriesName = [
   'World',
   'Egypt',
   'Jordan',
@@ -70,78 +81,71 @@ const kCountriesName = <String>[
   'Syria',
   'Tunisia',
   'United Arab Emirates',
+  'Albania',
+  'Argentina',
   'Australia',
   'Canada',
   'United Kingdom',
   'United States of America',
   'Brazil',
-  'Central African Republic',
+  // 'Central African Republic',
   'France',
   'Germany',
-  'Sweden',
   'China',
   'Greece',
-  'India',
+  'India (Malayalam)',
+  'India (Hindi)',
+  'Italy',
   'Japan',
   'South Korea',
-  'North Korea',
+  'Spain',
+  'Switzerland',
+  'Sweden',
+  // 'North Korea',
   'Russia',
+  'Turkey',
+  'Thailand',
   'Ukraine',
-  'Finland',
+  // 'Finland',
 ];
-
-const kListCountries = [
-  'EG',
-  'US',
-  'WO',
+const kLanguagesCode = [
+  'en', // world
+  'ar', //Egypt
+  'ar', //Jordan
+  'ar', //Lebanon
+  'ar', //Libya
+  'ar', //Morocco
+  // 'ar', //Palestine
+  'ar', //Saudi Arabia
+  'ar', //Syria
+  'ar', //Tunisia
+  'ar', //United Arab Emirates
+  'sq', // Albania
+  'es', // Argentina
+  'en', // Australia
+  'en', // Canada
+  'en', // United Kingdom
+  'en', // United States of America
+  'pt', // Brazil
+  // 'sg',Central African Republic
+  'fr', // France
+  'de', // Germany
+  // 'sq', // Albania
+  'zh', // China
+  'el', // Greece
+  'ml', // India (ml 'Malayalam')
+  'hi', // India (hi 'Hindi')
+  'it', // Italy
+  'jp', // Japan
+  'ko', // South Korea
+  'es', // Spain
+  'de', // Switzerland
+  'sv', // Sweden
+  // 'ko', // North Korea *
+  'ru', // Russia
+  'tr', // Turkey
+  'th', // Thailand
+  'uk', // Ukraine *
+  // 'sv', // Finland
+  // 'cy',
 ];
-const kListLanguage = [
-  'AR',
-  'EN',
-  'WO',
-];
-
-String kCountryFlag({required String countryFlagEmoji}) {
-  int flagOffset = 0x1F1E6;
-  int asciiOffset = 0x41;
-
-  String country = countryFlagEmoji; // Example country code
-
-  int firstChar = country.codeUnitAt(0) - asciiOffset + flagOffset;
-  int secondChar = country.codeUnitAt(1) - asciiOffset + flagOffset;
-
-  String flag =
-      String.fromCharCode(firstChar) + String.fromCharCode(secondChar);
-  return flag;
-}
- /*
- 'eg',
-'jo',
-'lb',
-'ly',
-'ma',
-'ps',
-'sa',
-'sy',
-'tn',
-'ae',
-'au',
-'ca',
-'gb',
-'us',
-'br',
-'cf',
-'fr',
-'de',
-'se',
-'cn',
-'gr',
-'in',
-'jp',
-'kr',
-'kp',
-'ru',
-'ua',
-'fi',
-
-  */

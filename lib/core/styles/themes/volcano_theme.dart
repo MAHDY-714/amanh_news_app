@@ -3,7 +3,7 @@ import 'package:amanh_news_app/core/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-ThemeData darkTheme(context) {
+ThemeData volcanoTheme(context) {
   return ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppColor.transparent,
     brightness: Brightness.light,
@@ -28,7 +28,7 @@ ThemeData darkTheme(context) {
           AppColor.redDeep7, //  button Lower Layer Color In Settings Screen
       onSecondary:
           AppColor.black38, // button Upper Layer Color In Settings Screen
-      surface: AppColor.white70, // icon Color In Settings Screen
+      surface: AppColor.white38, // icon Color In Settings Screen
       onSurface: AppColor.redDeep3, //  icon Mode Color In Settings Screen
       error: AppColor.white54, //border about body color In Settings Screen
       onError:

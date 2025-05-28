@@ -11,7 +11,7 @@ class BodyColor extends StatelessWidget {
   Widget build(BuildContext context) {
     return Theme(
       data: kMode
-          ? ThemeApp.darkThemeMode(context)
+          ? ThemeApp.volcanoThemeMode(context)
           : ThemeApp.lightThemeMode(context),
       child: Container(
         height: kHeight(context),

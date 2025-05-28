@@ -1,4 +1,3 @@
-import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:flutter/material.dart';
 
 class CountryFlagIcon extends StatelessWidget {
@@ -14,10 +13,21 @@ class CountryFlagIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      '${kCountryFlag(countryFlagEmoji: countryCode.toUpperCase())}',
+      '${_countryFlag(countryFlagEmoji: countryCode.toUpperCase())}',
       style: TextStyle(
         fontSize: fontSize ?? 12.0,
       ),
     );
   }
+}
+
+String _countryFlag({required String countryFlagEmoji}) {
+  int flagOffset = 0x1F1E6;
+  int asciiOffset = 0x41;
+  String country = countryFlagEmoji; // Example country code
+  int firstChar = country.codeUnitAt(0) - asciiOffset + flagOffset;
+  int secondChar = country.codeUnitAt(1) - asciiOffset + flagOffset;
+  String flag =
+      String.fromCharCode(firstChar) + String.fromCharCode(secondChar);
+  return flag;
 }

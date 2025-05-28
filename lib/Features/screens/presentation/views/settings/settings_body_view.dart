@@ -10,8 +10,8 @@ class SettingsBodyView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cubi = Cubits.settingsCubit(context);
-    var cubiHome = Cubits.homeCubit(context);
+    var cubi = Cubits.settings(context);
+    var cubiHome = Cubits.home(context);
     return PopScope(
       canPop: true,
       onPopInvokedWithResult: (canPop, result) async {

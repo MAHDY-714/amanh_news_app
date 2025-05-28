@@ -16,7 +16,7 @@ class HomeBodyView extends StatelessWidget {
 // state is ChangeThemeToLightModeSettingsState,
   @override
   Widget build(BuildContext context) {
-    var articlesNewsModel = Cubits.homeCubit(context).articlesNewsModel;
+    var articlesNewsModel = Cubits.home(context).articlesNewsModel;
 
     log(articlesNewsModel.toString());
     return BlocBuilder<HomeCubit, HomeState>(

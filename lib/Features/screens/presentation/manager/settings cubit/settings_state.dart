@@ -29,6 +29,12 @@ final class OpenSettingsItemAboutContentState extends SettingsState {}
 
 final class ChangeCountryNewsState extends SettingsState {}
 
-final class ChangeIconAndColorState extends SettingsState {}
+final class LoadingChangeCountryIconAndColorState extends SettingsState {}
+
+final class ChangeCountryIconAndColorState extends SettingsState {}
 
 final class ChangeLanguageNewsState extends SettingsState {}
+
+final class LoadingChangeLanguageIconAndColorState extends SettingsState {}
+
+final class ChangeLanguageIconAndColorState extends SettingsState {}

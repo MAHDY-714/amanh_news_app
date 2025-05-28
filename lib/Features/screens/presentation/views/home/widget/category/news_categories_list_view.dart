@@ -14,7 +14,7 @@ class NewsCategoriesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cubi = Cubits.homeCubit(context);
+    var cubi = Cubits.home(context);
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (BuildContext context, state) {
         return Container(

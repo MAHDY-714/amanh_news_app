@@ -21,7 +21,6 @@ class ItemInBodyContentForSettingsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var cubi = Cubits.settingsCubit(context);
     const space = SizedBox(width: 8.0);
     final textTheme = TextThemeApp.themeCodeInSettings(context);
     // bool isSelected = cubi.isSelectedCountry;
@@ -38,12 +37,13 @@ class ItemInBodyContentForSettingsItem extends StatelessWidget {
                 size: 25.0,
               ),
               space,
-              CountryFlagIcon(countryCode: countryCode ?? 'WO', fontSize: 16.0),
+              CountryFlagIcon(countryCode: countryCode ?? 'WO', fontSize: 20.0),
               space,
               Text(
-                countryLanguage ?? 'WORLD',
+                // '${countryLanguage?.toUpperCase()} ${cubi.listLanguage[0] == ' wo' ? '(Country Language)' : ''}' ??
+                countryLanguage ?? 'World',
                 // '',
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.start,
                 style: textTheme,
               ),
             ],

@@ -13,9 +13,8 @@ class NewsCountriesList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final int indexItemSelected = 2;
     const space = SizedBox(height: 8.0);
-    var cubi = Cubits.settingsCubit(context);
+    var cubi = Cubits.settings(context);
     return BlocBuilder<SettingsCubit, SettingsState>(
       builder: (context, state) {
         return SizedBox(
@@ -33,7 +32,7 @@ class NewsCountriesList extends StatelessWidget {
                   countryCode: kCountriesCode[index],
                   countryLanguage: kCountriesName[index],
                   icon: cubi.selectCountryIcon(index: index),
-                  color: cubi.selectCountryColor(index: index),
+                  color: cubi.selectCountryColor(context, index: index),
                   onTap: () {
                     cubi.changeCountryNews(context, index: index);
                   },

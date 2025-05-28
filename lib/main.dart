@@ -22,13 +22,13 @@ class AMANHNews extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        Cubits.homeCubitProvider(context),
-        Cubits.settingsCubitProvider(context),
+        Cubits.homeProvider(context),
+        Cubits.settingsProvider(context),
       ],
       child: Builder(builder: (context) {
         return MaterialApp.router(
           theme: ThemeApp.lightThemeMode(context),
-          darkTheme: ThemeApp.darkThemeMode(context),
+          darkTheme: ThemeApp.volcanoThemeMode(context),
           themeMode: ThemeApp.getThemeMode(context),
           debugShowCheckedModeBanner: false,
           routerConfig: AppRouter.routers,

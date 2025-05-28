@@ -16,7 +16,7 @@ class ApiServices {
     required String language,
   }) async {
     var response = await dio.get(
-      '$basicUrl?country=$country&language=$language&apiKey=${ApiKey.apiKey2}&category=$category',
+      '$basicUrl?country=$country&language=$language&apiKey=${ApiKey.apiKey}&category=$category',
     );
 
     return response.data;

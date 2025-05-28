@@ -37,7 +37,7 @@ class ItemsInSettingsListView extends StatelessWidget {
       AppColor.skyDeep,
       AppColor.orangeDeep,
     ];
-    var cubi = Cubits.settingsCubit(context);
+    var cubi = Cubits.settings(context);
     return BlocBuilder<SettingsCubit, SettingsState>(
       builder: (BuildContext context, SettingsState state) {
         return Container(
