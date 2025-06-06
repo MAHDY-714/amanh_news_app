@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:amanh_news_app/Features/screens/presentation/manager/home_cubit/home_cubit.dart';
 import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/category/news_categories_list_view.dart';
-import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/news/new_list_view.dart';
+import 'package:amanh_news_app/Features/screens/presentation/views/home/widget/home%20news/home_news_list_view.dart';
 import 'package:amanh_news_app/core/utils/cubit_objects.dart';
 import 'package:amanh_news_app/core/widget/circle_indicator_loading_widget.dart';
 import 'package:amanh_news_app/core/widget/no_body_widget.dart';
@@ -30,7 +30,7 @@ class HomeBodyView extends StatelessWidget {
                   condition: state is! HomeLoadingState,
                   builder: (context) {
                     if (state is HomeSuccessState) {
-                      return NewsListView(
+                      return HomeNewsListViewHome(
                           articlesNewsModel: state.articlesNewsModel);
                     } else if (state is HomeFailuresState) {
                       return NoBodyView(

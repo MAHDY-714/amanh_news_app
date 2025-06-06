@@ -1,4 +1,5 @@
 import 'package:amanh_news_app/core/styles/themes/theme%20styles/text_theme.dart';
+import 'package:amanh_news_app/core/utils/constance.dart';
 import 'package:flutter/material.dart';
 
 class NewsTitleAndDateInItemBuilder extends StatelessWidget {
@@ -27,6 +28,8 @@ class NewsTitleAndDateInItemBuilder extends StatelessWidget {
             Text(
               '$title',
               maxLines: 2,
+              textDirection:
+                  kLanguage == 'ar' ? TextDirection.rtl : TextDirection.ltr,
               style: titleTheme,
             ),
             Text(

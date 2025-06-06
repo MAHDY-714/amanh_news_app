@@ -42,9 +42,11 @@ abstract class TextStyles {
     fontSize: 10,
   );
   static const errorTextStyle = TextStyle(
-    color: AppColor.red2,
+    color: AppColor.redDeep,
+    height: 1.5 ,
     fontFamily: AssetsFontFamily.bitter900,
     fontSize: 17,
+    wordSpacing: 0.5,
   );
   static const settingsTitlesTextStyle = TextStyle(
     fontSize: 16.0,

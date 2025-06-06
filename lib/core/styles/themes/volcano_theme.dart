@@ -14,7 +14,7 @@ ThemeData volcanoTheme(context) {
       ),
     ),
     applyElevationOverlayColor: false,
-    primaryColor: AppColor.white38,
+    primaryColor: AppColor.white24,
     hoverColor: AppColor.redDeep6,
     dividerColor: AppColor.white24,
     indicatorColor: AppColor.redDeep4,
@@ -54,7 +54,7 @@ ThemeData volcanoTheme(context) {
         color: AppColor.white70,
       ),
       labelMedium: TextStyles.errorTextStyle.copyWith(
-        color: AppColor.redDeep3,
+        color: AppColor.white24,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
@@ -72,11 +72,11 @@ ThemeData volcanoTheme(context) {
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
         borderSide: const BorderSide(
-          color: AppColor.white90,
+          color: AppColor.white54,
           width: 2.0,
         ),
       ),
-      fillColor: AppColor.black26,
+      fillColor: AppColor.black12,
       filled: true,
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(

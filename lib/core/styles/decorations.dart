@@ -47,7 +47,10 @@ abstract class Decorations {
     );
   }
 
-  static InputDecoration inputFormFieldDecoration(context) {
+  static InputDecoration inputFormFieldDecoration(
+    context, {
+    void Function()? onPressed,
+  }) {
     return InputDecoration(
         contentPadding: EdgeInsetsDirectional.symmetric(
             horizontal: 8,
@@ -63,7 +66,7 @@ abstract class Decorations {
         hintStyle: InputDecorationThemeApp.themeHintStyle(context),
         hintFadeDuration: const Duration(seconds: 1),
         suffixIcon: IconButton(
-            onPressed: () {},
+            onPressed: onPressed,
             icon: Image(
                 height: 25,
                 width: 25,

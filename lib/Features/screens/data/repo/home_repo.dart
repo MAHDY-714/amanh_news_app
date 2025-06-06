@@ -4,8 +4,12 @@ import 'package:dartz/dartz.dart';
 
 abstract class HomeRepo {
   Future<Either<Failures, List<ArticlesNewsModel>>> getNews({
-      required String category,
-     String? country,
-     String? language,
+    required String category,
+    String? country,
+    String? language,
+  });
+  Future<Either<Failures, List<ArticlesNewsModel>>> getSearchNewsData({
+    required String qValue,
+    String? country,
   });
 }

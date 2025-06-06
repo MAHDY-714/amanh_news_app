@@ -25,15 +25,17 @@ class AMANHNews extends StatelessWidget {
         Cubits.homeProvider(context),
         Cubits.settingsProvider(context),
       ],
-      child: Builder(builder: (context) {
-        return MaterialApp.router(
-          theme: ThemeApp.lightThemeMode(context),
-          darkTheme: ThemeApp.volcanoThemeMode(context),
-          themeMode: ThemeApp.getThemeMode(context),
-          debugShowCheckedModeBanner: false,
-          routerConfig: AppRouter.routers,
-        );
-      }),
+      child: Builder(
+        builder: (context) {
+          return MaterialApp.router(
+            theme: ThemeApp.lightThemeMode(context),
+            darkTheme: ThemeApp.volcanoThemeMode(context),
+            themeMode: ThemeApp.getThemeMode(context),
+            debugShowCheckedModeBanner: false,
+            routerConfig: AppRouter.routers,
+          );
+        },
+      ),
     );
   }
 }

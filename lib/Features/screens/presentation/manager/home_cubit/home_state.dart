@@ -19,4 +19,19 @@ final class HomeFailuresState extends HomeState {
 }
 
 final class HomeChangeToDarkModeState extends HomeState {}
+
 final class HomeChangeToLightModeState extends HomeState {}
+
+final class SearchNewsLoadingState extends HomeState {}
+
+final class SearchNewsSuccessState extends HomeState {
+  final List<ArticlesNewsModel>? articlesNewsModel;
+
+  SearchNewsSuccessState({required this.articlesNewsModel});
+}
+
+final class SearchNewsFailuresState extends HomeState {
+  final String errorMessage;
+
+  SearchNewsFailuresState({required this.errorMessage});
+}

@@ -44,11 +44,11 @@ ThemeData lightTheme(context) {
     ),
     inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyles.hintTextStyle,
-      suffixIconColor: AppColor.black26,
+      suffixIconColor: AppColor.black38,
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
         borderSide: const BorderSide(
-          color: AppColor.black26,
+          color: AppColor.black38,
           width: 1.5,
         ),
       ),

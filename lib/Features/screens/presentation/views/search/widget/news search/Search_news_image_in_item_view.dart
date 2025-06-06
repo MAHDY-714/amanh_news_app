@@ -7,8 +7,8 @@ import 'package:amanh_news_app/core/widget/circle_indicator_loading_widget.dart'
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class NewsImageInItemBuilder extends StatelessWidget {
-  const NewsImageInItemBuilder({super.key, required this.articlesNewsModel});
+class SearchNewsImageInItemBuilder extends StatelessWidget {
+  const SearchNewsImageInItemBuilder({super.key, required this.articlesNewsModel});
   final ArticlesNewsModel articlesNewsModel;
   @override
   Widget build(BuildContext context) {

@@ -39,8 +39,10 @@ class ServerFailure extends Failures {
       return ServerFailure('Your request not found, Please try later!');
     } else if (statusCode == 500) {
       return ServerFailure('Internal Server error, Please try later');
+    } else if (response['results']['code'] == 'RateLimitExceeded') {
+      return ServerFailure('Please try again later, Rate Limit Exceeded');
     } else {
-      return ServerFailure('Ops There was an Error, Please try again');
+      return ServerFailure('Unexpected Error, Please try again later');
     }
   }
 }
