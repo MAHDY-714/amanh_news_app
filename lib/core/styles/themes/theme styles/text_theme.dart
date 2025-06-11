@@ -45,4 +45,18 @@ abstract class TextThemeApp extends ThemeApp {
             fontSize: kWidthConditions(context,
                 valueIsTrue: 15.0, valueIsFalse: 17.0),
           );
+    static themeTextPageNumberButton(context, {required bool isActive}) =>
+      Theme.of(context).textTheme.titleLarge!.copyWith(
+            fontFamily: isActive
+                ? AssetsFontFamily.bitter900
+                : AssetsFontFamily.bitter400,
+            fontSize: kWidthConditionsFonts(
+              context,
+              isConditions: isActive,
+              fontSizeLargeTrue: 13.0, // small phone
+              fontSizeLargeFalse: 15.0, // large  phone
+              fontSizeSmallTrue: 13.0, // small phone
+              fontSizeSmallFalse: 15.0, // large phone
+            ),
+          );        
 }
